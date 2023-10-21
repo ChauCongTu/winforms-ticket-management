@@ -19,10 +19,10 @@ namespace Sunny.UI.Demo.Views
 
         private void nmAside_MenuItemClick(TreeNode node, NavMenuItem item, int pageIndex)
         {
-            if (node.Tag.ToString() == "DV")
+            if (node.Tag.ToString() == "QLH")
             {
                 mainPanel.Controls.Clear();
-                mainPanel.Controls.Add(new ucDatVe());
+                mainPanel.Controls.Add(new ucQuanLyHang());
             }
             else
             {

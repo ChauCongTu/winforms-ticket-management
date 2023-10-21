@@ -124,6 +124,8 @@
     <Compile Include="Controls\FSplitContainer.designer.cs">
       <DependentUpon>FSplitContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\DAO_Airline.cs" />
+    <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="Forms\Frames\FCustomMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +360,16 @@
     <Compile Include="Controls\FOther.Designer.cs">
       <DependentUpon>FOther.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Airline.cs" />
+    <Compile Include="Model\Airplane.cs" />
+    <Compile Include="Model\Airport.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Flight.cs" />
+    <Compile Include="Model\Ticket.cs" />
+    <Compile Include="Model\TicketClass.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\Transit.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\FColorful.cs">
@@ -379,11 +391,11 @@
     <Compile Include="Views\MainFrame.Designer.cs">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserCtrl\ucDatVe.cs">
+    <Compile Include="Views\UserCtrl\ucQuanLyHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\UserCtrl\ucDatVe.Designer.cs">
-      <DependentUpon>ucDatVe.cs</DependentUpon>
+    <Compile Include="Views\UserCtrl\ucQuanLyHang.Designer.cs">
+      <DependentUpon>ucQuanLyHang.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Charts\FDoughnutChart.resx">
       <DependentUpon>FDoughnutChart.cs</DependentUpon>
@@ -554,8 +566,8 @@
     <EmbeddedResource Include="Views\MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\UserCtrl\ucDatVe.resx">
-      <DependentUpon>ucDatVe.cs</DependentUpon>
+    <EmbeddedResource Include="Views\UserCtrl\ucQuanLyHang.resx">
+      <DependentUpon>ucQuanLyHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -739,6 +751,13 @@
     <None Include="Resources\387816921_3010352259098655_2780024891844508024_n.jpg" />
     <None Include="Resources\download.png" />
     <None Include="Resources\download1.png" />
+    <None Include="Resources\114208.png" />
+    <None Include="Resources\3597075 %281%29.png" />
+    <None Include="Resources\6048190 %281%29.png" />
+    <None Include="Resources\plane.png" />
+    <None Include="Resources\plane1.png" />
+    <None Include="Resources\mixivivu2.png" />
+    <None Include="Resources\bg-mixivivu.png" />
     <Content Include="SunnyUI.ico" />
   </ItemGroup>
   <ItemGroup />

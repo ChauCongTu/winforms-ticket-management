@@ -40,8 +40,10 @@
             this.nmAside = new Sunny.UI.UINavMenu();
             this.uiAvatar1 = new Sunny.UI.UIAvatar();
             this.txtName = new Sunny.UI.UILabel();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,8 +91,6 @@
             treeNode6,
             treeNode7,
             treeNode8});
-            this.nmAside.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.nmAside.SelectedHighColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.nmAside.ShowLines = false;
             this.nmAside.Size = new System.Drawing.Size(259, 519);
             this.nmAside.Style = Sunny.UI.UIStyle.Custom;
@@ -103,7 +103,6 @@
             this.uiAvatar1.BackColor = System.Drawing.Color.Transparent;
             this.uiAvatar1.FillColor = System.Drawing.Color.White;
             this.uiAvatar1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiAvatar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.uiAvatar1.Location = new System.Drawing.Point(1007, 21);
             this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar1.Name = "uiAvatar1";
@@ -125,17 +124,6 @@
             this.txtName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtName.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // pbLogo
-            // 
-            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pbLogo.Image = global::Sunny.UI.Demo.Properties.Resources.download1;
-            this.pbLogo.Location = new System.Drawing.Point(-1, 2);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(259, 127);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 11;
-            this.pbLogo.TabStop = false;
-            // 
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.White;
@@ -144,12 +132,35 @@
             this.mainPanel.Size = new System.Drawing.Size(876, 519);
             this.mainPanel.TabIndex = 13;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Sunny.UI.Demo.Properties.Resources.mixivivu2;
+            this.pictureBox1.Location = new System.Drawing.Point(264, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(699, 127);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pbLogo.Image = global::Sunny.UI.Demo.Properties.Resources.download1;
+            this.pbLogo.Location = new System.Drawing.Point(-1, 6);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(259, 127);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 11;
+            this.pbLogo.TabStop = false;
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1133, 652);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.pbLogo);
@@ -158,6 +169,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFrame";
             this.Text = "Phần mềm quản lý đặt vé máy bay - MixiVivu";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
@@ -170,5 +182,6 @@
         private System.Windows.Forms.PictureBox pbLogo;
         private UILabel txtName;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

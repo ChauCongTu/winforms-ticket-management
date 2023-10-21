@@ -189,4 +189,4 @@ D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.De
 D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\SunnyUI.Demo.exe
 D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\SunnyUI.Demo.pdb
 D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.MainFrame.resources
-D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.UserCtrl.ucDatVe.resources
+D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.UserCtrl.ucQuanLyHang.resources
