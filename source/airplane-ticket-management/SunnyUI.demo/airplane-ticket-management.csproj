@@ -358,12 +358,6 @@
     <Compile Include="Controls\FOther.Designer.cs">
       <DependentUpon>FOther.cs</DependentUpon>
     </Compile>
-    <Compile Include="main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="main.Designer.cs">
-      <DependentUpon>main.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\FColorful.cs">
@@ -379,6 +373,18 @@
       <DependentUpon>FCommon.cs</DependentUpon>
     </Compile>
     <Compile Include="Units\UMapperDemo.cs" />
+    <Compile Include="Views\MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainFrame.Designer.cs">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucDatVe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucDatVe.Designer.cs">
+      <DependentUpon>ucDatVe.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Charts\FDoughnutChart.resx">
       <DependentUpon>FDoughnutChart.cs</DependentUpon>
     </EmbeddedResource>
@@ -529,9 +535,6 @@
     <EmbeddedResource Include="Controls\FOther.resx">
       <DependentUpon>FOther.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main.resx">
-      <DependentUpon>main.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -547,6 +550,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Units\FCommon.resx">
       <DependentUpon>FCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainFrame.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucDatVe.resx">
+      <DependentUpon>ucDatVe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -728,6 +737,8 @@
     <None Include="Resources\9.png" />
     <None Include="Resources\Home_32x32.png" />
     <None Include="Resources\387816921_3010352259098655_2780024891844508024_n.jpg" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\download1.png" />
     <Content Include="SunnyUI.ico" />
   </ItemGroup>
   <ItemGroup />

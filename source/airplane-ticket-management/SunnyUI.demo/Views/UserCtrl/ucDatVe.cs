@@ -7,18 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Sunny.UI.Demo
+namespace Sunny.UI.Demo.Views.UserCtrl
 {
-    public partial class main : Form
+    public partial class ucDatVe : UserControl
     {
-        public main()
+        public ucDatVe()
         {
             InitializeComponent();
-        }
-
-        private void uiNavMenu1_MenuItemClick(TreeNode node, NavMenuItem item, int pageIndex)
-        {
-
         }
     }
 }
