@@ -20,9 +20,8 @@ namespace Sunny.UI.Demo.Model
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
         public string Status { get; set; }
-        public Transaction transaction { get; set; }
 
-        public User(int userId, string userName, string emailAddress, string password, string role, string gender, string phoneNumber, string address, string status, Transaction transaction)
+        public User(int userId, string userName, string emailAddress, string password, string role, string gender, string phoneNumber, string address, string status)
         {
             UserId = userId;
             UserName = userName;
@@ -33,7 +32,6 @@ namespace Sunny.UI.Demo.Model
             PhoneNumber = phoneNumber;
             Address = address;
             Status = status;
-            this.transaction = transaction;
         }
     }
 }

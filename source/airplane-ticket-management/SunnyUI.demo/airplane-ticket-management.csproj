@@ -125,13 +125,23 @@
       <DependentUpon>FSplitContainer.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\DAO_Airline.cs" />
+    <Compile Include="DAO\DAO_Airplane.cs" />
+    <Compile Include="DAO\DAO_Airport.cs" />
+    <Compile Include="DAO\DAO_Customer.cs" />
+    <Compile Include="DAO\DAO_Flight.cs" />
+    <Compile Include="DAO\DAO_Ticket.cs" />
+    <Compile Include="DAO\DAO_Transaction.cs" />
+    <Compile Include="DAO\DAO_Transit.cs" />
+    <Compile Include="DAO\DAO_User.cs" />
     <Compile Include="DAO\DBConnection.cs" />
+    <Compile Include="DAO\DAO_TicketClass.cs" />
     <Compile Include="Forms\Frames\FCustomMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Frames\FCustomMain.Designer.cs">
       <DependentUpon>FCustomMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="Industrial\FLight.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,6 +401,24 @@
     <Compile Include="Views\MainFrame.Designer.cs">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Airlines\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airlines\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Airlines\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airlines\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucCustomer.Designer.cs">
+      <DependentUpon>ucCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserCtrl\ucQuanLyHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -565,6 +593,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airlines\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airlines\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucCustomer.resx">
+      <DependentUpon>ucCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucQuanLyHang.resx">
       <DependentUpon>ucQuanLyHang.cs</DependentUpon>

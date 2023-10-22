@@ -13,13 +13,13 @@ namespace Sunny.UI.Demo.Model
 
         public int TransitId { get; set; }
         public Airport TransitAirport { get; set; }
-        public Flight Flight { get; set; }
+        public int FlightId { get; set; }
 
-        public Transit(int transitId, Airport transitAirport, Flight flight)
+        public Transit(int transitId, Airport transitAirport, int flight)
         {
             TransitId = transitId;
             TransitAirport = transitAirport;
-            Flight = flight;
+            FlightId = flight;
         }
     }
 }

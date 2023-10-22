@@ -40,12 +40,48 @@ namespace Sunny.UI.Demo.Views.UserCtrl
             int id = (int)row.Cells[0].Value;
             if (e.ColumnIndex == dgvAirlines.Columns["_sua"].Index)
             {
-                MessageBox.Show("Chỉnh sửa hãng số: " + id);
+                Airline airline = new DAO_Airline().getById(id);
+                NForm.Airlines.edit editForm = new NForm.Airlines.edit(airline);
+                editForm.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Xóa hãng số: "+ id);
+                var result = MessageBox.Show("Bạn có chắc muốn xóa hãng hàng không này?",
+                                                        "Xác nhận xóa",
+                                                        MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    DataGridViewRow delRow = dgvAirlines.Rows[e.RowIndex];
+                    DAO_Airline daoAirline = new DAO_Airline();
+                    try
+                    {
+                        daoAirline.delete(id);
+                    }
+                    catch(Exception exception)
+                    {
+                        MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại.", "Lỗi");
+                        return;
+                    }
+                    MessageBox.Show("Xóa thành công hãng hàng không", "Thành công");
+
+                    table_load();
+                }
+                else
+                {
+                    table_load();
+                }
             }
+        }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            NForm.Airlines.add addForm = new NForm.Airlines.add();
+            addForm.ShowDialog();
+        }
+
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            table_load();
         }
     }
 }

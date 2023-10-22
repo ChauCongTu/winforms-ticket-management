@@ -24,6 +24,11 @@ namespace Sunny.UI.Demo.Views
                 mainPanel.Controls.Clear();
                 mainPanel.Controls.Add(new ucQuanLyHang());
             }
+            else if (node.Tag.ToString() == "DV")
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(new ucCustomer());
+            }
             else
             {
                 mainPanel.Controls.Clear();

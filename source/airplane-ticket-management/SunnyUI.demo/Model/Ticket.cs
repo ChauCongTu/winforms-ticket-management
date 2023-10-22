@@ -8,20 +8,22 @@ namespace Sunny.UI.Demo.Model
     public class Ticket
     {
         public int TicketId { get; set; }
-        public Flight flight { get; set; }
+        public int FlightId { get; set; }
         public int PriceVnd { get; set; }
         public float PriceUsd { get; set; }
         public string SeatNumber { get; set; }
-        public TicketClass ticketClass { get; set; }
+        public string ticketClass { get; set; }
+        public int ClassId { get; set; }
 
-        public Ticket(int ticketId, Flight flight, int priceVnd, float priceUsd, string seatNumber, TicketClass ticketClass)
+        public Ticket(int ticketId, int flightId, int priceVnd, float priceUsd, string seatNumber, string ticketClass, int classId)
         {
             TicketId = ticketId;
-            this.flight = flight;
+            FlightId = flightId;
             PriceVnd = priceVnd;
             PriceUsd = priceUsd;
             SeatNumber = seatNumber;
             this.ticketClass = ticketClass;
+            ClassId = classId;
         }
 
         public Ticket()
