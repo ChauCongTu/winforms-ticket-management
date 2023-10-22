@@ -43,6 +43,7 @@
             this.mainPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new Sunny.UI.UIButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,8 @@
             this.nmAside.FullRowSelect = true;
             this.nmAside.ImeMode = System.Windows.Forms.ImeMode.On;
             this.nmAside.ItemHeight = 50;
-            this.nmAside.Location = new System.Drawing.Point(-1, 135);
+            this.nmAside.Location = new System.Drawing.Point(-1, 166);
+            this.nmAside.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nmAside.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             this.nmAside.Name = "nmAside";
             treeNode1.Name = "baoCaoThongKe";
@@ -92,7 +94,7 @@
             treeNode7,
             treeNode8});
             this.nmAside.ShowLines = false;
-            this.nmAside.Size = new System.Drawing.Size(259, 519);
+            this.nmAside.Size = new System.Drawing.Size(345, 639);
             this.nmAside.Style = Sunny.UI.UIStyle.Custom;
             this.nmAside.TabIndex = 7;
             this.nmAside.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -103,21 +105,23 @@
             this.uiAvatar1.BackColor = System.Drawing.Color.Transparent;
             this.uiAvatar1.FillColor = System.Drawing.Color.White;
             this.uiAvatar1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiAvatar1.Location = new System.Drawing.Point(1007, 21);
+            this.uiAvatar1.Location = new System.Drawing.Point(1343, 10);
+            this.uiAvatar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar1.Name = "uiAvatar1";
-            this.uiAvatar1.Size = new System.Drawing.Size(60, 60);
+            this.uiAvatar1.Size = new System.Drawing.Size(80, 74);
             this.uiAvatar1.Style = Sunny.UI.UIStyle.Custom;
             this.uiAvatar1.TabIndex = 10;
             this.uiAvatar1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(969, 89);
+            this.txtName.Location = new System.Drawing.Point(1292, 92);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(153, 23);
+            this.txtName.Size = new System.Drawing.Size(204, 28);
             this.txtName.Style = Sunny.UI.UIStyle.Custom;
             this.txtName.TabIndex = 12;
             this.txtName.Text = "Châu Quế Nhơn";
@@ -127,18 +131,20 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.White;
-            this.mainPanel.Location = new System.Drawing.Point(258, 135);
+            this.mainPanel.Location = new System.Drawing.Point(344, 166);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(876, 519);
+            this.mainPanel.Size = new System.Drawing.Size(1168, 639);
             this.mainPanel.TabIndex = 13;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Sunny.UI.Demo.Properties.Resources.mixivivu2;
-            this.pictureBox1.Location = new System.Drawing.Point(264, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(352, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(699, 127);
+            this.pictureBox1.Size = new System.Drawing.Size(932, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -147,19 +153,34 @@
             // 
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.Image = global::Sunny.UI.Demo.Properties.Resources.download1;
-            this.pbLogo.Location = new System.Drawing.Point(-1, 6);
+            this.pbLogo.Location = new System.Drawing.Point(-1, 7);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(259, 127);
+            this.pbLogo.Size = new System.Drawing.Size(345, 156);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 11;
             this.pbLogo.TabStop = false;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnLogout.Location = new System.Drawing.Point(1331, 124);
+            this.btnLogout.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(132, 35);
+            this.btnLogout.TabIndex = 15;
+            this.btnLogout.Text = "[Đăng Xuất]";
+            this.btnLogout.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // MainFrame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1133, 652);
+            this.ClientSize = new System.Drawing.Size(1511, 802);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.txtName);
@@ -167,8 +188,11 @@
             this.Controls.Add(this.uiAvatar1);
             this.Controls.Add(this.nmAside);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainFrame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý đặt vé máy bay - MixiVivu";
+            this.Load += new System.EventHandler(this.MainFrame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
@@ -183,5 +207,6 @@
         private UILabel txtName;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private UIButton btnLogout;
     }
 }

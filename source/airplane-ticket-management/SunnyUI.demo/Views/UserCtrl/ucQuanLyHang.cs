@@ -44,7 +44,7 @@ namespace Sunny.UI.Demo.Views.UserCtrl
                 NForm.Airlines.edit editForm = new NForm.Airlines.edit(airline);
                 editForm.ShowDialog();
             }
-            else
+            else if (e.ColumnIndex == dgvAirlines.Columns["_xoa"].Index)
             {
                 var result = MessageBox.Show("Bạn có chắc muốn xóa hãng hàng không này?",
                                                         "Xác nhận xóa",
@@ -82,6 +82,18 @@ namespace Sunny.UI.Demo.Views.UserCtrl
         private void uiButton2_Click(object sender, EventArgs e)
         {
             table_load();
+        }
+
+        private void uiImageButton1_Click(object sender, EventArgs e)
+        {
+            dgvAirlines.Rows.Clear();
+            int i = 1;
+            DAO_Airline daoAirline = new DAO_Airline();
+            List<Airline> airlines = daoAirline.findByName(txtSearch.Text);
+            foreach (Airline airline in airlines)
+            {
+                dgvAirlines.Rows.Add(airline.AirlineId, airline.AirlineName, airline.numbOfPlane);
+            }
         }
     }
 }

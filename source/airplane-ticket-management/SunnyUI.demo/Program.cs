@@ -10,7 +10,7 @@ namespace Sunny.UI.Demo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.MainFrame());
+            Application.Run(new Views.LoginFrame());
         }
     }
 }

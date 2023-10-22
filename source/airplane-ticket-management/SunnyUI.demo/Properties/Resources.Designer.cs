@@ -93,6 +93,16 @@ namespace Sunny.UI.Demo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2899266__1_ {
+            get {
+                object obj = ResourceManager.GetObject("2899266 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3 {
             get {
                 object obj = ResourceManager.GetObject("_3", resourceCulture);
@@ -413,6 +423,16 @@ namespace Sunny.UI.Demo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eye {
+            get {
+                object obj = ResourceManager.GetObject("eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap feyenoord {
             get {
                 object obj = ResourceManager.GetObject("feyenoord", resourceCulture);
@@ -693,6 +713,26 @@ namespace Sunny.UI.Demo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search_icon_white_16 {
+            get {
+                object obj = ResourceManager.GetObject("search-icon-white-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap searchicon {
+            get {
+                object obj = ResourceManager.GetObject("searchicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sevilla {
             get {
                 object obj = ResourceManager.GetObject("sevilla", resourceCulture);
@@ -733,6 +773,16 @@ namespace Sunny.UI.Demo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap transit {
+            get {
+                object obj = ResourceManager.GetObject("transit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap udinese {
             get {
                 object obj = ResourceManager.GetObject("udinese", resourceCulture);
@@ -746,6 +796,16 @@ namespace Sunny.UI.Demo.Properties {
         internal static System.Drawing.Bitmap valencia {
             get {
                 object obj = ResourceManager.GetObject("valencia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view_details_4__1_ {
+            get {
+                object obj = ResourceManager.GetObject("view-details-4 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

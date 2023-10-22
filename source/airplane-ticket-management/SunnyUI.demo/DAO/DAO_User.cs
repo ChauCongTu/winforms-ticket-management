@@ -124,6 +124,40 @@ namespace Sunny.UI.Demo.DAO
             _conn.Close();
             return user;
         }
+        public User getLogin(string email)
+        {
+            User user = new User();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT * FROM users WHERE email_address = '{email}'", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return user;
+            }
+
+            while (reader.Read())
+            {
+                int userId = reader.GetInt32(0);
+                string userName = reader.GetString(1);
+                string emailAddress = reader.GetString(2);
+                string password = reader.GetString(3);
+                string role = reader.GetString(4);
+                string gender = reader.GetString(5);
+                string phoneNumber = reader.GetString(6);
+                string address = reader.GetString(7);
+                string status = reader.GetString(8);
+
+                user = new User(userId, userName, emailAddress, password, role, gender, phoneNumber, address, status);
+            }
+
+            _conn.Close();
+            return user;
+        }
 
         public void add(User user)
         {

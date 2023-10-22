@@ -75,6 +75,7 @@ namespace Sunny.UI.Demo.DAO
         public Airport getById(int airport_id)
         {
             Airport airport = new Airport();
+            _conn.Close();
             _conn.Open();
             try
             {

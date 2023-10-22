@@ -136,6 +136,9 @@
   <data name="_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="searchicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\searchicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,6 +172,9 @@
   <data name="relationship" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\relationship.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="search-icon-white-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-icon-white-16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SunnyLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SunnyLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,11 +187,17 @@
   <data name="roma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\roma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2899266 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2899266 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="6048190 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6048190 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="milan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\milan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg-mixivivu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg-mixivivu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,6 +234,9 @@
   </data>
   <data name="HMF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HMF1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AHM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AHM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -264,6 +279,9 @@
   </data>
   <data name="porto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\porto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="view-details-4 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view-details-4 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,7 +346,7 @@
   <data name="real_madrid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\real_madrid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bg-mixivivu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg-mixivivu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

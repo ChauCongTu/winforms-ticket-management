@@ -94,6 +94,10 @@ CREATE TABLE transits (
     flight_id INT FOREIGN KEY REFERENCES flights(flight_id)
 );
 
+ALTER TABLE customers
+ADD CONSTRAINT UQ_id_number UNIQUE (id_number);
+
+
 
 -- Tạo trigger
 -- Thiết lập thời gian đặt vé
