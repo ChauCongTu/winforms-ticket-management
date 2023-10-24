@@ -83,7 +83,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 16);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Radius = 10;
             this.txtPassword.ShowText = false;
             this.txtPassword.Size = new System.Drawing.Size(358, 46);
@@ -160,7 +160,7 @@
             // lbForgotPassword
             // 
             this.lbForgotPassword.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbForgotPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.lbForgotPassword.ForeColor = System.Drawing.Color.Red;
             this.lbForgotPassword.Location = new System.Drawing.Point(569, 482);
             this.lbForgotPassword.Name = "lbForgotPassword";
             this.lbForgotPassword.Size = new System.Drawing.Size(168, 42);
@@ -170,6 +170,8 @@
             this.lbForgotPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbForgotPassword.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.lbForgotPassword.Click += new System.EventHandler(this.lbForgotPassword_Click);
+            this.lbForgotPassword.MouseEnter += new System.EventHandler(this.lbForgotPassword_MouseEnter);
+            this.lbForgotPassword.MouseLeave += new System.EventHandler(this.lbForgotPassword_MouseLeave_1);
             // 
             // btnTooglePassword
             // 
@@ -215,6 +217,7 @@
             this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.pbLogo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LoginFrame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý đặt vé máy bay - MixiVivu";

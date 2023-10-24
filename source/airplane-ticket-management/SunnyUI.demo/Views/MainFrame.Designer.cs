@@ -52,7 +52,7 @@
             // 
             this.nmAside.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nmAside.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
-            this.nmAside.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmAside.Font = new System.Drawing.Font("Georgia Ref", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmAside.FullRowSelect = true;
             this.nmAside.ImeMode = System.Windows.Forms.ImeMode.On;
             this.nmAside.ItemHeight = 50;
@@ -164,7 +164,7 @@
             // btnLogout
             // 
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnLogout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(1331, 124);
             this.btnLogout.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnLogout.Name = "btnLogout";

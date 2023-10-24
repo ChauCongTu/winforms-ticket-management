@@ -47,7 +47,7 @@ namespace Sunny.UI.Demo.Views
             }
             else if (Helper.IsEmail(usn) == false)
             {
-                lbMsgEmail.Text = "Địa chỉ Email không hợp lệ";
+                lbMsgEmail.Text = "Địa chỉ Email không đúng dịnh dạng";
             }
             else
             {
@@ -81,16 +81,26 @@ namespace Sunny.UI.Demo.Views
 
         private void btnTooglePassword_Click(object sender, EventArgs e)
         {
-            if (_showPass == 0)
+            if (_showPass == 1)
             {
-                txtPassword.PasswordChar = '*';
-                _showPass = 1;
+                txtPassword.PasswordChar = '●';
+                _showPass = 0;
             }
             else
             {
                 txtPassword.PasswordChar = '\0';
-                _showPass = 0;
+                _showPass = 1;
             }
+        }
+
+        private void lbForgotPassword_MouseLeave_1(object sender, EventArgs e)
+        {
+            lbForgotPassword.ForeColor = Color.Red;
+        }
+
+        private void lbForgotPassword_MouseEnter(object sender, EventArgs e)
+        {
+            lbForgotPassword.ForeColor = Color.Orange;
         }
     }
 }
