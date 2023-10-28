@@ -44,6 +44,36 @@ namespace Sunny.UI.Demo.DAO
             }
             return list;
         }
+
+        public List<Airport> getByCity(string City)
+        {
+            List<Airport> list = new List<Airport>();
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"SELECT * FROM airports WHERE city LIKE '%{City}%'", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return list;
+            }
+
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string name = reader.GetString(1);
+                string coor = reader.GetString(2);
+                string address = reader.GetString(3);
+                string city = reader.GetString(4);
+                string country = reader.GetString(5);
+                Airport airport = new Airport(id, name, coor, address, city, country);
+                list.Add(airport);
+            }
+            return list;
+        }
+
         public List<Airport> findByName(string airport_name)
         {
             List<Airport> list = new List<Airport>();

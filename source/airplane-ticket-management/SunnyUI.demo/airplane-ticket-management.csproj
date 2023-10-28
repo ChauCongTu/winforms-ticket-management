@@ -419,6 +419,12 @@
     <Compile Include="Views\NForm\Airlines\edit.Designer.cs">
       <DependentUpon>edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Flights\ShowDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Flights\ShowDetail.Designer.cs">
+      <DependentUpon>ShowDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserCtrl\ucBooking.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -436,6 +442,12 @@
     </Compile>
     <Compile Include="Views\UserCtrl\ucCustomer.Designer.cs">
       <DependentUpon>ucCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucEmployee.Designer.cs">
+      <DependentUpon>ucEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserCtrl\ucFlight.cs">
       <SubType>UserControl</SubType>
@@ -627,6 +639,9 @@
     <EmbeddedResource Include="Views\NForm\Airlines\edit.resx">
       <DependentUpon>edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Flights\ShowDetail.resx">
+      <DependentUpon>ShowDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucBooking.resx">
       <DependentUpon>ucBooking.cs</DependentUpon>
     </EmbeddedResource>
@@ -635,6 +650,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucCustomer.resx">
       <DependentUpon>ucCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucEmployee.resx">
+      <DependentUpon>ucEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucFlight.resx">
       <DependentUpon>ucFlight.cs</DependentUpon>
@@ -837,6 +855,7 @@
     <None Include="Resources\search-icon-white-16.jpg" />
     <None Include="Resources\searchicon.png" />
     <None Include="Resources\eye.png" />
+    <None Include="Resources\plane-mixivivu-removebg-preview.png" />
     <Content Include="SunnyUI.ico" />
   </ItemGroup>
   <ItemGroup />

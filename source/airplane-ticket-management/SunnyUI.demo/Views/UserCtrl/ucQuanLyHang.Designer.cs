@@ -87,7 +87,7 @@
             this.dgvAirlines.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.dgvAirlines.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.dgvAirlines.Location = new System.Drawing.Point(4, 106);
-            this.dgvAirlines.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvAirlines.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAirlines.Name = "dgvAirlines";
             this.dgvAirlines.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -113,6 +113,7 @@
             this.dgvAirlines.TabIndex = 0;
             this.dgvAirlines.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.dgvAirlines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAirlines_CellContentClick);
+            this.dgvAirlines.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAirlines_CellContentDoubleClick);
             // 
             // STT
             // 
@@ -178,7 +179,7 @@
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiButton1.Location = new System.Drawing.Point(953, 572);
-            this.uiButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiButton1.Margin = new System.Windows.Forms.Padding(4);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton1.Name = "uiButton1";
             this.uiButton1.Size = new System.Drawing.Size(205, 43);
@@ -192,7 +193,7 @@
             this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiButton2.Location = new System.Drawing.Point(752, 572);
-            this.uiButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiButton2.Margin = new System.Windows.Forms.Padding(4);
             this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton2.Name = "uiButton2";
             this.uiButton2.Size = new System.Drawing.Size(171, 43);
@@ -247,7 +248,7 @@
             this.uiImageButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiImageButton1.Image = global::Sunny.UI.Demo.Properties.Resources.searchicon;
             this.uiImageButton1.Location = new System.Drawing.Point(485, 572);
-            this.uiImageButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiImageButton1.Margin = new System.Windows.Forms.Padding(4);
             this.uiImageButton1.Name = "uiImageButton1";
             this.uiImageButton1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.uiImageButton1.Size = new System.Drawing.Size(45, 43);
@@ -262,7 +263,7 @@
             // 
             this.pictureBox1.Image = global::Sunny.UI.Demo.Properties.Resources.plane1;
             this.pictureBox1.Location = new System.Drawing.Point(779, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -281,7 +282,7 @@
             this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.uiMarkLabel1);
             this.Controls.Add(this.dgvAirlines);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucQuanLyHang";
             this.Size = new System.Drawing.Size(1164, 639);
             this.Load += new System.EventHandler(this.ucDatVe_Load);

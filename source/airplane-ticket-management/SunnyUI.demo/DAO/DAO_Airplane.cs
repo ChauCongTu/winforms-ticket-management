@@ -43,6 +43,33 @@ namespace Sunny.UI.Demo.DAO
             }
             return list;
         }
+        public List<Airplane> getByAirline(int airline_id)
+        {
+            List<Airplane> list = new List<Airplane>();
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"SELECT * FROM airplanes WHERE airline_id = {airline_id}", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return list;
+            }
+
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string name = reader.GetString(1);
+                string desc = reader.GetString(2);
+                string code = reader.GetString(3);
+                int numb = reader.GetInt32(4);
+                Airplane airplane = new Airplane(id, name, desc, code, numb);
+                list.Add(airplane);
+            }
+            return list;
+        }
         public Airplane getById(int id)
         {
             Airplane airplane = new Airplane();

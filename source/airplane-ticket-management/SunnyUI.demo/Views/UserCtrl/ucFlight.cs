@@ -35,5 +35,58 @@ namespace Sunny.UI.Demo.Views.UserCtrl
         {
             table_load();
         }
+
+        private void dgvFlight_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvFlight.Rows[e.RowIndex];
+            int id = 0;
+            try
+            {
+                id = (int)row.Cells[0].Value;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            if (e.ColumnIndex == dgvFlight.Columns["_detail"].Index)
+            {
+                Flight flight = new DAO_Flight().getById(id);
+                NForm.Flights.ShowDetail detail = new NForm.Flights.ShowDetail(flight);
+                detail.ShowDialog();
+            }
+            else if (e.ColumnIndex == dgvFlight.Columns["_xoa"].Index)
+            {
+                var result = MessageBox.Show("Bạn có chắc muốn xóa chuyến bay này?",
+                                                        "Xác nhận xóa",
+                                                        MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    DataGridViewRow delRow = dgvFlight.Rows[e.RowIndex];
+                    DAO_Flight daoFlight = new DAO_Flight();
+                    try
+                    {
+                        daoFlight.delete(id);
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại.", "Lỗi");
+                        return;
+                    }
+                    MessageBox.Show("Xóa thành công", "Thành công");
+
+                    table_load();
+                }
+                else
+                {
+                    table_load();
+                }
+            }
+        }
+
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            NForm.Flights.ShowDetail detail = new NForm.Flights.ShowDetail();
+            detail.ShowDialog();
+        }
     }
 }

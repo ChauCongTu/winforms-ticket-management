@@ -70,6 +70,32 @@ namespace Sunny.UI.Demo.DAO
             }
             return airline;
         }
+        public Airline getByPlaneId(int Planeid)
+        {
+            Airline airline = new Airline();
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"SELECT l.airline_id, l.airline_name, COUNT(p.airplane_id) as numb_of_plane " +
+                    $"FROM airlines l LEFT JOIN airplanes p ON l.airline_id = p.airline_id " +
+                    $"WHERE p.airplane_id = " + Planeid +
+                    $"GROUP BY l.airline_id, l.airline_name", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return airline;
+            }
+            while (reader.Read())
+            {
+                int airline_id = reader.GetInt32(0);
+                string name = reader.GetString(1);
+                int numb = reader.GetInt32(2);
+                airline = new Airline(airline_id, name, numb);
+            }
+            return airline;
+        }
         public List<Airline> findByName(string name)
         {
             List<Airline> list = new List<Airline>();

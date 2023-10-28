@@ -100,6 +100,7 @@ ADD CONSTRAINT UQ_id_number UNIQUE (id_number);
 
 
 -- Tạo trigger
+
 -- Thiết lập thời gian đặt vé
 CREATE TRIGGER SetBookingDateOnInsert
 ON transactions
@@ -125,17 +126,38 @@ BEGIN
 END;
 
 -- Cập nhật lại remain ticket khi có transaction được tạo
-CREATE TRIGGER UpdateRemainingTickets
+CREATE TRIGGER update_remaining_tickets
 ON transactions
 AFTER INSERT
 AS
 BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @ticket_id INT;
+    DECLARE @flight_id INT;
+    DECLARE @tickets_count INT;
+
+    -- Lấy ticket_id từ giao dịch mới được thêm vào
+    SELECT @ticket_id = inserted.ticket_id
+    FROM inserted;
+
+    -- Lấy flight_id từ tickets bằng ticket_id
+    SELECT @flight_id = flight_id
+    FROM tickets
+    WHERE ticket_id = @ticket_id;
+
+    -- Đếm số lượng vé có cùng flight_id nhưng không phải của giao dịch mới
+    SELECT @tickets_count = COUNT(*)
+    FROM transactions
+    WHERE ticket_id = @ticket_id
+      AND transaction_id NOT IN (SELECT transaction_id FROM inserted);
+
+    -- Cập nhật remaining_tickets của chuyến bay
     UPDATE flights
-    SET remaining_tickets = remaining_tickets - 1
-    FROM flights
-    INNER JOIN tickets ON flights.flight_id = tickets.flight_id
-    INNER JOIN inserted ON tickets.ticket_id = inserted.ticket_id;
+    SET remaining_tickets = total_tickets - @tickets_count
+    WHERE flight_id = @flight_id;
 END;
+
 
 -- Cập nhật lại số lượng transits trong flight
 CREATE TRIGGER UpdateTransitsCount
@@ -158,6 +180,41 @@ BEGIN
         FROM deleted
     ) AS changes ON flights.flight_id = changes.flight_id;
 END;
+
+CREATE TRIGGER check_total_tickets
+ON flights
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @flight_id INT;
+    DECLARE @total_tickets INT;
+    DECLARE @airplane_id INT;
+    DECLARE @number_of_seats INT;
+
+    -- Lấy flight_id và total_tickets từ bản ghi được thêm hoặc cập nhật
+    SELECT @flight_id = i.flight_id, @total_tickets = i.total_tickets
+    FROM inserted i;
+
+    -- Lấy airplane_id từ chuyến bay
+    SELECT @airplane_id = aircraft_id
+    FROM flights
+    WHERE flight_id = @flight_id;
+
+    -- Lấy số ghế của máy bay
+    SELECT @number_of_seats = number_of_seats
+    FROM airplanes
+    WHERE airplane_id = @airplane_id;
+
+    -- Kiểm tra total_tickets phải nhỏ hơn hoặc bằng số ghế của máy bay
+    IF @total_tickets > @number_of_seats
+    BEGIN
+        ROLLBACK TRANSACTION;
+        RETURN;
+    END;
+END;
+
 
 -- Chèn dữ liệu cho bảng airlines
 INSERT INTO airlines (airline_name)

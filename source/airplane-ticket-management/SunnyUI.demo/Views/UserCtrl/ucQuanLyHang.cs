@@ -36,41 +36,7 @@ namespace Sunny.UI.Demo.Views.UserCtrl
 
         private void dgvAirlines_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dgvAirlines.Rows[e.RowIndex];
-            int id = (int)row.Cells[0].Value;
-            if (e.ColumnIndex == dgvAirlines.Columns["_sua"].Index)
-            {
-                Airline airline = new DAO_Airline().getById(id);
-                NForm.Airlines.edit editForm = new NForm.Airlines.edit(airline);
-                editForm.ShowDialog();
-            }
-            else if (e.ColumnIndex == dgvAirlines.Columns["_xoa"].Index)
-            {
-                var result = MessageBox.Show("Bạn có chắc muốn xóa hãng hàng không này?",
-                                                        "Xác nhận xóa",
-                                                        MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
-                {
-                    DataGridViewRow delRow = dgvAirlines.Rows[e.RowIndex];
-                    DAO_Airline daoAirline = new DAO_Airline();
-                    try
-                    {
-                        daoAirline.delete(id);
-                    }
-                    catch(Exception exception)
-                    {
-                        MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại.", "Lỗi");
-                        return;
-                    }
-                    MessageBox.Show("Xóa thành công hãng hàng không", "Thành công");
-
-                    table_load();
-                }
-                else
-                {
-                    table_load();
-                }
-            }
+            
         }
 
         private void uiButton1_Click(object sender, EventArgs e)
@@ -93,6 +59,53 @@ namespace Sunny.UI.Demo.Views.UserCtrl
             foreach (Airline airline in airlines)
             {
                 dgvAirlines.Rows.Add(airline.AirlineId, airline.AirlineName, airline.numbOfPlane);
+            }
+        }
+
+        private void dgvAirlines_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvAirlines.Rows[e.RowIndex];
+            int id = 0;
+            try
+            {
+                id = (int)row.Cells[0].Value;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            if (e.ColumnIndex == dgvAirlines.Columns["_sua"].Index)
+            {
+                Airline airline = new DAO_Airline().getById(id);
+                NForm.Airlines.edit editForm = new NForm.Airlines.edit(airline);
+                editForm.ShowDialog();
+            }
+            else if (e.ColumnIndex == dgvAirlines.Columns["_xoa"].Index)
+            {
+                var result = MessageBox.Show("Bạn có chắc muốn xóa hãng hàng không này?",
+                                                        "Xác nhận xóa",
+                                                        MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    DataGridViewRow delRow = dgvAirlines.Rows[e.RowIndex];
+                    DAO_Airline daoAirline = new DAO_Airline();
+                    try
+                    {
+                        daoAirline.delete(id);
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại.", "Lỗi");
+                        return;
+                    }
+                    MessageBox.Show("Xóa thành công hãng hàng không", "Thành công");
+
+                    table_load();
+                }
+                else
+                {
+                    table_load();
+                }
             }
         }
     }
