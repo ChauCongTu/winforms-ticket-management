@@ -33,10 +33,23 @@ namespace Sunny.UI.Demo.Views.UserCtrl
 
         private void ucFlight_Load(object sender, EventArgs e)
         {
+            cbFrom.DataSource = Helper.LoadProvince();
+            cbTo.DataSource = Helper.LoadProvince();
             table_load();
         }
 
         private void dgvFlight_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            NForm.Flights.ShowDetail detail = new NForm.Flights.ShowDetail();
+            detail.ShowDialog();
+        }
+
+        private void dgvFlight_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dgvFlight.Rows[e.RowIndex];
             int id = 0;
@@ -83,10 +96,33 @@ namespace Sunny.UI.Demo.Views.UserCtrl
             }
         }
 
-        private void uiButton2_Click(object sender, EventArgs e)
+        private void uiButton1_Click(object sender, EventArgs e)
         {
-            NForm.Flights.ShowDetail detail = new NForm.Flights.ShowDetail();
-            detail.ShowDialog();
+            table_load();
+        }
+
+        private void uiImageButton2_Click(object sender, EventArgs e)
+        {
+            if (cbFrom.Text.Length <= 0 || cbTo.Text.Length <= 0)
+            {
+                MessageBox.Show("Vui lòng chọn điểm đi và điểm đến");
+                return;
+            }
+            dgvFlight.Rows.Clear();
+            DAO_Flight daoFlight = new DAO_Flight();
+            List<Flight> flights = daoFlight.getByRoute(cbFrom.Text, cbTo.Text,dpDateArrive.Value.ToString("yyyy-MM-dd"));
+            if (flights.Count > 0)
+            {
+                MessageBox.Show("Tìm thấy "+ flights.Count + " chuyến bay từ " + cbFrom.Text + " - " + cbTo.Text + " vào ngày " + dpDateArrive.Value.ToString("dd/MM/yyyy"));
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy chuyến bay nào từ " + cbFrom.Text + " - " + cbTo.Text + " vào ngày " + dpDateArrive.Value.ToString("dd/MM/yyyy"));
+            }
+            foreach (Flight flight in flights)
+            {
+                dgvFlight.Rows.Add(flight.FlightId, flight.DeparturePoint, flight.Destination, flight.RemainingTickets, flight.DepartureTime.Value.ToString("dd/MM/yyyy"), flight.DepartureTime.Value.ToString("hh:mm"));
+            }
         }
     }
 }

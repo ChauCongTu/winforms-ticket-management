@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Sunny.UI.Demo.DAO
 {
@@ -25,7 +26,194 @@ namespace Sunny.UI.Demo.DAO
 
             try
             {
-                command = new SqlCommand($"SELECT * FROM flights", _conn);
+                command = new SqlCommand($"SELECT * FROM flights ORDER BY departure_time DESC", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return flightList;
+            }
+
+            while (reader.Read())
+            {
+                int flightId = reader.GetInt32(0);
+                string departurePoint = reader.GetString(1);
+                string destination = reader.GetString(2);
+                int departureAirportId = reader.GetInt32(3);
+                int destinationAirportId = reader.GetInt32(4);
+                DateTime? departureTime = null;
+                if (!reader.IsDBNull(5))
+                {
+                    departureTime = reader.GetDateTime(5);
+                }
+                DateTime? arrivalTime = null;
+                if (!reader.IsDBNull(6))
+                {
+                    arrivalTime = reader.GetDateTime(6);
+                }
+                DateTime? flightDate = null;
+                if (!reader.IsDBNull(7))
+                {
+                    flightDate = reader.GetDateTime(7);
+                }
+                int totalTickets = reader.GetInt32(8);
+                int remainingTickets = reader.GetInt32(9);
+                int transits = reader.GetInt32(10);
+                int airplaneId = reader.GetInt32(11);
+                string status = reader.GetString(12);
+
+                // Lấy thông tin sân bay
+                DAO_Airport daoAirport = new DAO_Airport();
+                Airport departureAirport = daoAirport.getById(departureAirportId);
+                Airport destinationAirport = daoAirport.getById(destinationAirportId);
+
+                // Lấy thông tin máy bay
+                DAO_Airplane daoAirplane = new DAO_Airplane();
+                Airplane airplane = daoAirplane.getById(airplaneId);
+
+                Flight flight = new Flight(flightId, departurePoint, destination, departureAirport, destinationAirport, departureTime, arrivalTime, flightDate, totalTickets, remainingTickets, transits, airplane, status);
+                flightList.Add(flight);
+            }
+
+            _conn.Close();
+            return flightList;
+        }
+
+        /// <summary>
+        /// Get Flight by date with param string format: "yyyy-MM-dd"
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public List<Flight> getByDate(string date)
+        {
+            List<Flight> flightList = new List<Flight>();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT * FROM flights WHERE CONVERT(DATE, departure_time) = '{date}' ORDER BY departure_time DESC", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return flightList;
+            }
+
+            while (reader.Read())
+            {
+                int flightId = reader.GetInt32(0);
+                string departurePoint = reader.GetString(1);
+                string destination = reader.GetString(2);
+                int departureAirportId = reader.GetInt32(3);
+                int destinationAirportId = reader.GetInt32(4);
+                DateTime? departureTime = null;
+                if (!reader.IsDBNull(5))
+                {
+                    departureTime = reader.GetDateTime(5);
+                }
+                DateTime? arrivalTime = null;
+                if (!reader.IsDBNull(6))
+                {
+                    arrivalTime = reader.GetDateTime(6);
+                }
+                DateTime? flightDate = null;
+                if (!reader.IsDBNull(7))
+                {
+                    flightDate = reader.GetDateTime(7);
+                }
+                int totalTickets = reader.GetInt32(8);
+                int remainingTickets = reader.GetInt32(9);
+                int transits = reader.GetInt32(10);
+                int airplaneId = reader.GetInt32(11);
+                string status = reader.GetString(12);
+
+                // Lấy thông tin sân bay
+                DAO_Airport daoAirport = new DAO_Airport();
+                Airport departureAirport = daoAirport.getById(departureAirportId);
+                Airport destinationAirport = daoAirport.getById(destinationAirportId);
+
+                // Lấy thông tin máy bay
+                DAO_Airplane daoAirplane = new DAO_Airplane();
+                Airplane airplane = daoAirplane.getById(airplaneId);
+
+                Flight flight = new Flight(flightId, departurePoint, destination, departureAirport, destinationAirport, departureTime, arrivalTime, flightDate, totalTickets, remainingTickets, transits, airplane, status);
+                flightList.Add(flight);
+            }
+
+            _conn.Close();
+            return flightList;
+        }
+        public List<Flight> getByRoute(string from, string to)
+        {
+            List<Flight> flightList = new List<Flight>();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT * FROM flights WHERE departure_point = '{from}' AND destination = '{to}' ORDER BY departure_time DESC", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return flightList;
+            }
+
+            while (reader.Read())
+            {
+                int flightId = reader.GetInt32(0);
+                string departurePoint = reader.GetString(1);
+                string destination = reader.GetString(2);
+                int departureAirportId = reader.GetInt32(3);
+                int destinationAirportId = reader.GetInt32(4);
+                DateTime? departureTime = null;
+                if (!reader.IsDBNull(5))
+                {
+                    departureTime = reader.GetDateTime(5);
+                }
+                DateTime? arrivalTime = null;
+                if (!reader.IsDBNull(6))
+                {
+                    arrivalTime = reader.GetDateTime(6);
+                }
+                DateTime? flightDate = null;
+                if (!reader.IsDBNull(7))
+                {
+                    flightDate = reader.GetDateTime(7);
+                }
+                int totalTickets = reader.GetInt32(8);
+                int remainingTickets = reader.GetInt32(9);
+                int transits = reader.GetInt32(10);
+                int airplaneId = reader.GetInt32(11);
+                string status = reader.GetString(12);
+
+                // Lấy thông tin sân bay
+                DAO_Airport daoAirport = new DAO_Airport();
+                Airport departureAirport = daoAirport.getById(departureAirportId);
+                Airport destinationAirport = daoAirport.getById(destinationAirportId);
+
+                // Lấy thông tin máy bay
+                DAO_Airplane daoAirplane = new DAO_Airplane();
+                Airplane airplane = daoAirplane.getById(airplaneId);
+
+                Flight flight = new Flight(flightId, departurePoint, destination, departureAirport, destinationAirport, departureTime, arrivalTime, flightDate, totalTickets, remainingTickets, transits, airplane, status);
+                flightList.Add(flight);
+            }
+
+            _conn.Close();
+            return flightList;
+        }
+
+        public List<Flight> getByRoute(string from, string to, string date)
+        {
+            List<Flight> flightList = new List<Flight>();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT * FROM flights WHERE departure_point = '{from}' AND destination = '{to}' AND CONVERT(DATE, departure_time) = '{date}' ORDER BY departure_time DESC", _conn);
                 reader = command.ExecuteReader();
             }
             catch (Exception e)
@@ -147,7 +335,7 @@ namespace Sunny.UI.Demo.DAO
             string flightDateStr = flight.FlightDate != null ? $"'{flight.FlightDate.Value.ToString("yyyy-MM-dd")}'" : "NULL";
             command = new SqlCommand($"INSERT INTO flights (departure_point, destination, departure_airport, destination_airport, departure_time, arrival_time, flight_date, total_tickets, remaining_tickets, transits, aircraft_id, status) " +
                 $"VALUES (N'{flight.DeparturePoint}', N'{flight.Destination}', {flight.DepartureAirport.AirportId}, {flight.DestinationAirport.AirportId}, " +
-                $"{departureTimeStr}, {arrivalTimeStr}, {flightDateStr}, {flight.TotalTickets}, {flight.RemainingTickets}, {flight.Transits}, {flight.Airplane.AirplaneId}, N'{flight.Status}')", _conn);
+                $"{departureTimeStr}, {arrivalTimeStr}, {flightDateStr}, {flight.TotalTickets}, {flight.RemainingTickets}, {flight.Transits}, {flight.Airplane.AirplaneId}, N'active')", _conn);
             command.ExecuteNonQuery();
             _conn.Close();
         }

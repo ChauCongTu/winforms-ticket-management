@@ -28,26 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiMarkLabel1 = new Sunny.UI.UIMarkLabel();
             this.dgvFlight = new Sunny.UI.UIDataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgviName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgviEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgviDOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this._quacanh = new System.Windows.Forms.DataGridViewImageColumn();
             this._detail = new System.Windows.Forms.DataGridViewImageColumn();
             this._xoa = new System.Windows.Forms.DataGridViewImageColumn();
+            this.uiButton1 = new Sunny.UI.UIButton();
+            this.dpDateArrive = new Sunny.UI.UIDatePicker();
+            this.btnSearch = new Sunny.UI.UIImageButton();
+            this.uiLabel6 = new Sunny.UI.UILabel();
+            this.uiLabel4 = new Sunny.UI.UILabel();
+            this.uiLine2 = new Sunny.UI.UILine();
+            this.cbFrom = new Sunny.UI.UIComboBox();
+            this.cbTo = new Sunny.UI.UIComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // uiButton2
@@ -81,19 +91,19 @@
             // 
             // dgvFlight
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.dgvFlight.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgvFlight.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFlight.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFlight.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.dgvFlight.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFlight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFlight.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFlight.ColumnHeadersHeight = 32;
             this.dgvFlight.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvFlight.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -106,66 +116,45 @@
             this._quacanh,
             this._detail,
             this._xoa});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFlight.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFlight.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFlight.EnableHeadersVisualStyles = false;
             this.dgvFlight.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.dgvFlight.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
-            this.dgvFlight.Location = new System.Drawing.Point(4, 110);
+            this.dgvFlight.Location = new System.Drawing.Point(4, 268);
             this.dgvFlight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvFlight.Name = "dgvFlight";
             this.dgvFlight.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFlight.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFlight.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvFlight.RowHeadersWidth = 51;
             this.dgvFlight.RowHeight = 0;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.dgvFlight.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgvFlight.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvFlight.SelectedIndex = -1;
             this.dgvFlight.ShowGridLine = true;
             this.dgvFlight.ShowRect = false;
-            this.dgvFlight.Size = new System.Drawing.Size(1156, 443);
+            this.dgvFlight.Size = new System.Drawing.Size(1156, 285);
             this.dgvFlight.TabIndex = 9;
             this.dgvFlight.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.dgvFlight.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFlight_CellContentClick);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Sunny.UI.Demo.Properties.Resources._3597075__1_;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.ToolTipText = "Sửa";
-            this.dataGridViewImageColumn1.Width = 75;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::Sunny.UI.Demo.Properties.Resources.transit;
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Width = 75;
+            this.dgvFlight.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFlight_CellContentDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -210,6 +199,40 @@
             this._time.Name = "_time";
             this._time.ReadOnly = true;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Sunny.UI.Demo.Properties.Resources._3597075__1_;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.ToolTipText = "Sửa";
+            this.dataGridViewImageColumn1.Width = 75;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::Sunny.UI.Demo.Properties.Resources.transit;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Width = 75;
+            // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.HeaderText = "";
+            this.dataGridViewImageColumn3.Image = global::Sunny.UI.Demo.Properties.Resources._6048190__1_;
+            this.dataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn3.MinimumWidth = 6;
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            this.dataGridViewImageColumn3.ReadOnly = true;
+            this.dataGridViewImageColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn3.ToolTipText = "Xóa";
+            this.dataGridViewImageColumn3.Width = 123;
+            // 
             // _quacanh
             // 
             this._quacanh.HeaderText = "";
@@ -239,10 +262,135 @@
             this._xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this._xoa.ToolTipText = "Xóa";
             // 
+            // uiButton1
+            // 
+            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiButton1.Location = new System.Drawing.Point(752, 576);
+            this.uiButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.Size = new System.Drawing.Size(171, 43);
+            this.uiButton1.TabIndex = 12;
+            this.uiButton1.Text = "Tải lại";
+            this.uiButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
+            // dpDateArrive
+            // 
+            this.dpDateArrive.DateFormat = "dd/MM/yyyy";
+            this.dpDateArrive.FillColor = System.Drawing.Color.White;
+            this.dpDateArrive.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.dpDateArrive.Location = new System.Drawing.Point(308, 197);
+            this.dpDateArrive.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dpDateArrive.MaxLength = 10;
+            this.dpDateArrive.MinimumSize = new System.Drawing.Size(63, 0);
+            this.dpDateArrive.Name = "dpDateArrive";
+            this.dpDateArrive.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.dpDateArrive.Size = new System.Drawing.Size(457, 43);
+            this.dpDateArrive.SymbolDropDown = 61555;
+            this.dpDateArrive.SymbolNormal = 61555;
+            this.dpDateArrive.TabIndex = 15;
+            this.dpDateArrive.Text = "Không";
+            this.dpDateArrive.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dpDateArrive.Value = new System.DateTime(2023, 10, 28, 0, 0, 0, 0);
+            this.dpDateArrive.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(798, 197);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.btnSearch.Size = new System.Drawing.Size(125, 43);
+            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSearch.TabIndex = 16;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnSearch.Click += new System.EventHandler(this.uiImageButton2_Click);
+            // 
+            // uiLabel6
+            // 
+            this.uiLabel6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel6.Location = new System.Drawing.Point(550, 105);
+            this.uiLabel6.Name = "uiLabel6";
+            this.uiLabel6.Size = new System.Drawing.Size(173, 32);
+            this.uiLabel6.TabIndex = 32;
+            this.uiLabel6.Text = "Điểm đến:";
+            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel4
+            // 
+            this.uiLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel4.Location = new System.Drawing.Point(304, 105);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(173, 32);
+            this.uiLabel4.TabIndex = 31;
+            this.uiLabel4.Text = "Điểm đi:";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLine2
+            // 
+            this.uiLine2.FillColor = System.Drawing.Color.White;
+            this.uiLine2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLine2.Location = new System.Drawing.Point(525, 150);
+            this.uiLine2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiLine2.Name = "uiLine2";
+            this.uiLine2.Size = new System.Drawing.Size(14, 29);
+            this.uiLine2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLine2.TabIndex = 30;
+            this.uiLine2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbFrom
+            // 
+            this.cbFrom.DataSource = null;
+            this.cbFrom.FillColor = System.Drawing.Color.White;
+            this.cbFrom.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbFrom.Location = new System.Drawing.Point(308, 142);
+            this.cbFrom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbFrom.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbFrom.Name = "cbFrom";
+            this.cbFrom.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbFrom.Size = new System.Drawing.Size(211, 43);
+            this.cbFrom.TabIndex = 33;
+            this.cbFrom.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbFrom.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbTo
+            // 
+            this.cbTo.DataSource = null;
+            this.cbTo.FillColor = System.Drawing.Color.White;
+            this.cbTo.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cbTo.Location = new System.Drawing.Point(554, 142);
+            this.cbTo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTo.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbTo.Name = "cbTo";
+            this.cbTo.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbTo.Size = new System.Drawing.Size(211, 43);
+            this.cbTo.TabIndex = 34;
+            this.cbTo.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbTo.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // ucFlight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cbTo);
+            this.Controls.Add(this.cbFrom);
+            this.Controls.Add(this.uiLabel6);
+            this.Controls.Add(this.uiLabel4);
+            this.Controls.Add(this.uiLine2);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.dpDateArrive);
+            this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.uiButton2);
             this.Controls.Add(this.uiMarkLabel1);
             this.Controls.Add(this.dgvFlight);
@@ -251,6 +399,7 @@
             this.Size = new System.Drawing.Size(1164, 639);
             this.Load += new System.EventHandler(this.ucFlight_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +420,14 @@
         private System.Windows.Forms.DataGridViewImageColumn _quacanh;
         private System.Windows.Forms.DataGridViewImageColumn _detail;
         private System.Windows.Forms.DataGridViewImageColumn _xoa;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
+        private UIButton uiButton1;
+        private UIDatePicker dpDateArrive;
+        private UIImageButton btnSearch;
+        private UILabel uiLabel6;
+        private UILabel uiLabel4;
+        private UILine uiLine2;
+        private UIComboBox cbFrom;
+        private UIComboBox cbTo;
     }
 }
