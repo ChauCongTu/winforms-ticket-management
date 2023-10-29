@@ -425,6 +425,18 @@
     <Compile Include="Views\NForm\Flights\ShowDetail.Designer.cs">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Flights\Transits\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Flights\Transits\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Flights\Transits\TransitFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Flights\Transits\TransitFrame.Designer.cs">
+      <DependentUpon>TransitFrame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserCtrl\ucBooking.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -641,6 +653,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NForm\Flights\ShowDetail.resx">
       <DependentUpon>ShowDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Flights\Transits\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Flights\Transits\TransitFrame.resx">
+      <DependentUpon>TransitFrame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucBooking.resx">
       <DependentUpon>ucBooking.cs</DependentUpon>

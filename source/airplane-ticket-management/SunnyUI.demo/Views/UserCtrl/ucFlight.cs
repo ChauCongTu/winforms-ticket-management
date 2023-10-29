@@ -53,18 +53,25 @@ namespace Sunny.UI.Demo.Views.UserCtrl
         {
             DataGridViewRow row = dgvFlight.Rows[e.RowIndex];
             int id = 0;
-            try
+            if (row.Cells[0].Value != null && ValidationHelper.IsNumber(row.Cells[0].Value.ToString()) == true)
             {
                 id = (int)row.Cells[0].Value;
             }
-            catch (Exception ex)
+            else
             {
-
+                MessageBox.Show("Thao tác không hợp lệ, vui lòng thử lại!", "Lỗi");
+                return;
             }
             if (e.ColumnIndex == dgvFlight.Columns["_detail"].Index)
             {
                 Flight flight = new DAO_Flight().getById(id);
                 NForm.Flights.ShowDetail detail = new NForm.Flights.ShowDetail(flight);
+                detail.ShowDialog();
+            }
+            else if (e.ColumnIndex == dgvFlight.Columns["_quacanh"].Index)
+            {
+                Flight flight = new DAO_Flight().getById(id);
+                NForm.Flights.Transits.TransitFrame detail = new NForm.Flights.Transits.TransitFrame(flight);
                 detail.ShowDialog();
             }
             else if (e.ColumnIndex == dgvFlight.Columns["_xoa"].Index)

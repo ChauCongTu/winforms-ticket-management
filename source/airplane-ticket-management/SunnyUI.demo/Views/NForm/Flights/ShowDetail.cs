@@ -202,7 +202,7 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
                         lbErr.Text = "Có lỗi xảy ra, vui lòng thử lại!";
                         lbErr.ForeColor = Color.Red;
                     }
-                    MessageBox.Show("Cập nhật thông tin chuyến bay thành công");
+                    MessageBox.Show("Cập nhật thông tin chuyến bay thành công", "Thành công");
                     this.Close();
                     this.Hide();
                 }
