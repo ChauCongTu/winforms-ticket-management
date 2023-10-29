@@ -30,18 +30,18 @@
         {
             this.uiMarkLabel1 = new Sunny.UI.UIMarkLabel();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiComboBox1 = new Sunny.UI.UIComboBox();
-            this.uiComboBox2 = new Sunny.UI.UIComboBox();
-            this.uiLabel2 = new Sunny.UI.UILabel();
+            this.lbCheckCustomer = new Sunny.UI.UILabel();
+            this.uiImageButton1 = new Sunny.UI.UIImageButton();
+            this.txtCCCD = new Sunny.UI.UITextBox();
+            this.uiButton1 = new Sunny.UI.UIButton();
+            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiComboBox3 = new Sunny.UI.UIComboBox();
             this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
-            this.uiButton1 = new Sunny.UI.UIButton();
-            this.txtCCCD = new Sunny.UI.UITextBox();
-            this.uiImageButton1 = new Sunny.UI.UIImageButton();
-            this.lbCheckCustomer = new Sunny.UI.UILabel();
+            this.uiComboBox2 = new Sunny.UI.UIComboBox();
+            this.uiLabel2 = new Sunny.UI.UILabel();
+            this.uiComboBox1 = new Sunny.UI.UIComboBox();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).BeginInit();
             this.SuspendLayout();
@@ -89,64 +89,86 @@
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiGroupBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel1
+            // lbCheckCustomer
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(13, 48);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(116, 23);
-            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = "Chuyến bay:";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.lbCheckCustomer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCheckCustomer.Location = new System.Drawing.Point(539, 79);
+            this.lbCheckCustomer.Name = "lbCheckCustomer";
+            this.lbCheckCustomer.Size = new System.Drawing.Size(275, 16);
+            this.lbCheckCustomer.Style = Sunny.UI.UIStyle.Custom;
+            this.lbCheckCustomer.TabIndex = 11;
+            this.lbCheckCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCheckCustomer.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiComboBox1
+            // uiImageButton1
             // 
-            this.uiComboBox1.DataSource = null;
-            this.uiComboBox1.FillColor = System.Drawing.Color.White;
-            this.uiComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiComboBox1.Location = new System.Drawing.Point(123, 46);
-            this.uiComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBox1.Name = "uiComboBox1";
-            this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(269, 29);
-            this.uiComboBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiComboBox1.TabIndex = 1;
-            this.uiComboBox1.Text = "uiComboBox1";
-            this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.uiComboBox1.SelectedIndexChanged += new System.EventHandler(this.uiComboBox1_SelectedIndexChanged);
+            this.uiImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiImageButton1.Image = global::Sunny.UI.Demo.Properties.Resources.searchicon;
+            this.uiImageButton1.Location = new System.Drawing.Point(786, 46);
+            this.uiImageButton1.Name = "uiImageButton1";
+            this.uiImageButton1.Padding = new System.Windows.Forms.Padding(10);
+            this.uiImageButton1.Size = new System.Drawing.Size(28, 29);
+            this.uiImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.uiImageButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton1.TabIndex = 9;
+            this.uiImageButton1.TabStop = false;
+            this.uiImageButton1.Text = null;
+            this.uiImageButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiComboBox2
+            // txtCCCD
             // 
-            this.uiComboBox2.DataSource = null;
-            this.uiComboBox2.FillColor = System.Drawing.Color.White;
-            this.uiComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiComboBox2.Location = new System.Drawing.Point(123, 104);
-            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBox2.Name = "uiComboBox2";
-            this.uiComboBox2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox2.Size = new System.Drawing.Size(269, 29);
-            this.uiComboBox2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiComboBox2.TabIndex = 3;
-            this.uiComboBox2.Text = "uiComboBox2";
-            this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.txtCCCD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCCCD.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.txtCCCD.Location = new System.Drawing.Point(538, 46);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCCCD.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.ShowText = false;
+            this.txtCCCD.Size = new System.Drawing.Size(251, 29);
+            this.txtCCCD.Style = Sunny.UI.UIStyle.Custom;
+            this.txtCCCD.TabIndex = 10;
+            this.txtCCCD.Text = "Nhập số CCCD";
+            this.txtCCCD.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtCCCD.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel2
+            // uiButton1
             // 
-            this.uiLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel2.Location = new System.Drawing.Point(13, 106);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(116, 23);
-            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel2.TabIndex = 2;
-            this.uiLabel2.Text = "Loại vé:";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiButton1.Location = new System.Drawing.Point(439, 104);
+            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.Size = new System.Drawing.Size(375, 29);
+            this.uiButton1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiButton1.TabIndex = 9;
+            this.uiButton1.Text = "Thêm thông tin khách hàng";
+            this.uiButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLabel5.Location = new System.Drawing.Point(435, 50);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(116, 23);
+            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel5.TabIndex = 7;
+            this.uiLabel5.Text = "Khách hàng:";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiLabel4
+            // 
+            this.uiLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLabel4.Location = new System.Drawing.Point(13, 228);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(116, 23);
+            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel4.TabIndex = 6;
+            this.uiLabel4.Text = "Chọn vé:";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiComboBox3
             // 
@@ -177,86 +199,64 @@
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel4
+            // uiComboBox2
             // 
-            this.uiLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(13, 228);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(116, 23);
-            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel4.TabIndex = 6;
-            this.uiLabel4.Text = "Chọn vé:";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiComboBox2.DataSource = null;
+            this.uiComboBox2.FillColor = System.Drawing.Color.White;
+            this.uiComboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiComboBox2.Location = new System.Drawing.Point(123, 104);
+            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox2.Name = "uiComboBox2";
+            this.uiComboBox2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiComboBox2.Size = new System.Drawing.Size(269, 29);
+            this.uiComboBox2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox2.TabIndex = 3;
+            this.uiComboBox2.Text = "uiComboBox2";
+            this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel5
+            // uiLabel2
             // 
-            this.uiLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(435, 50);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(116, 23);
-            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel5.TabIndex = 7;
-            this.uiLabel5.Text = "Khách hàng:";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLabel2.Location = new System.Drawing.Point(13, 106);
+            this.uiLabel2.Name = "uiLabel2";
+            this.uiLabel2.Size = new System.Drawing.Size(116, 23);
+            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel2.TabIndex = 2;
+            this.uiLabel2.Text = "Loại vé:";
+            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiButton1
+            // uiComboBox1
             // 
-            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiButton1.Location = new System.Drawing.Point(439, 104);
-            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.Size = new System.Drawing.Size(375, 29);
-            this.uiButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiButton1.TabIndex = 9;
-            this.uiButton1.Text = "Thêm thông tin khách hàng";
-            this.uiButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiComboBox1.DataSource = null;
+            this.uiComboBox1.FillColor = System.Drawing.Color.White;
+            this.uiComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiComboBox1.Location = new System.Drawing.Point(123, 46);
+            this.uiComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox1.Name = "uiComboBox1";
+            this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiComboBox1.Size = new System.Drawing.Size(269, 29);
+            this.uiComboBox1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiComboBox1.TabIndex = 1;
+            this.uiComboBox1.Text = "uiComboBox1";
+            this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiComboBox1.SelectedIndexChanged += new System.EventHandler(this.uiComboBox1_SelectedIndexChanged);
             // 
-            // txtCCCD
+            // uiLabel1
             // 
-            this.txtCCCD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCCCD.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtCCCD.Location = new System.Drawing.Point(538, 46);
-            this.txtCCCD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCCCD.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.ShowText = false;
-            this.txtCCCD.Size = new System.Drawing.Size(251, 29);
-            this.txtCCCD.Style = Sunny.UI.UIStyle.Custom;
-            this.txtCCCD.TabIndex = 10;
-            this.txtCCCD.Text = "Nhập số CCCD";
-            this.txtCCCD.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtCCCD.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiImageButton1
-            // 
-            this.uiImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiImageButton1.Image = global::Sunny.UI.Demo.Properties.Resources.searchicon;
-            this.uiImageButton1.Location = new System.Drawing.Point(786, 46);
-            this.uiImageButton1.Name = "uiImageButton1";
-            this.uiImageButton1.Padding = new System.Windows.Forms.Padding(10);
-            this.uiImageButton1.Size = new System.Drawing.Size(28, 29);
-            this.uiImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.uiImageButton1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiImageButton1.TabIndex = 9;
-            this.uiImageButton1.TabStop = false;
-            this.uiImageButton1.Text = null;
-            this.uiImageButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // lbCheckCustomer
-            // 
-            this.lbCheckCustomer.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCheckCustomer.Location = new System.Drawing.Point(539, 79);
-            this.lbCheckCustomer.Name = "lbCheckCustomer";
-            this.lbCheckCustomer.Size = new System.Drawing.Size(275, 16);
-            this.lbCheckCustomer.Style = Sunny.UI.UIStyle.Custom;
-            this.lbCheckCustomer.TabIndex = 11;
-            this.lbCheckCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbCheckCustomer.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLabel1.Location = new System.Drawing.Point(13, 48);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(116, 23);
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel1.TabIndex = 0;
+            this.uiLabel1.Text = "Chuyến bay:";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // ucBookingTicket
             // 

@@ -44,6 +44,11 @@ namespace Sunny.UI.Demo.Views
                 mainPanel.Controls.Clear();
                 mainPanel.Controls.Add(new ucFlight());
             }
+            else if (node.Tag.ToString() == "BCTK")
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(new ucStatistical());
+            }
             else
             {
                 mainPanel.Controls.Clear();

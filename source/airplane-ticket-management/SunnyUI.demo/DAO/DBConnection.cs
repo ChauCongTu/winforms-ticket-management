@@ -8,7 +8,7 @@ namespace Sunny.UI.Demo.DAO
 {
     public class DBConnection
     {
-        public string _strConn = "Data Source=./;Initial Catalog=airplane_ticket_management;Integrated Security=True";
+        public string _strConn = "Data Source=DESKTOP-A4AKIEN;Initial Catalog=airplane_ticket_management;Integrated Security=True";
         public DBConnection()
         {
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Sunny.UI.Demo</RootNamespace>
     <AssemblyName>SunnyUI.Demo</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>SunnyUI.ico</ApplicationIcon>
@@ -425,6 +428,12 @@
     <Compile Include="Views\NForm\Flights\ShowDetail.Designer.cs">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserCtrl\ucStatistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucStatistical.Designer.cs">
+      <DependentUpon>ucStatistical.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserCtrl\ucBooking.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -642,6 +651,9 @@
     <EmbeddedResource Include="Views\NForm\Flights\ShowDetail.resx">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucStatistical.resx">
+      <DependentUpon>ucStatistical.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucBooking.resx">
       <DependentUpon>ucBooking.cs</DependentUpon>
     </EmbeddedResource>
@@ -663,6 +675,7 @@
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
+    <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
