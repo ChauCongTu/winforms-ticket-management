@@ -437,6 +437,18 @@
     <Compile Include="Views\NForm\Flights\Transits\TransitFrame.Designer.cs">
       <DependentUpon>TransitFrame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Tickets\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Tickets\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Tickets\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Tickets\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserCtrl\ucBooking.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -472,6 +484,12 @@
     </Compile>
     <Compile Include="Views\UserCtrl\ucQuanLyHang.Designer.cs">
       <DependentUpon>ucQuanLyHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucTicket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucTicket.Designer.cs">
+      <DependentUpon>ucTicket.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Charts\FDoughnutChart.resx">
       <DependentUpon>FDoughnutChart.cs</DependentUpon>
@@ -660,6 +678,12 @@
     <EmbeddedResource Include="Views\NForm\Flights\Transits\TransitFrame.resx">
       <DependentUpon>TransitFrame.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Tickets\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Tickets\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucBooking.resx">
       <DependentUpon>ucBooking.cs</DependentUpon>
     </EmbeddedResource>
@@ -677,6 +701,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucQuanLyHang.resx">
       <DependentUpon>ucQuanLyHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucTicket.resx">
+      <DependentUpon>ucTicket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -874,6 +901,7 @@
     <None Include="Resources\searchicon.png" />
     <None Include="Resources\eye.png" />
     <None Include="Resources\plane-mixivivu-removebg-preview.png" />
+    <None Include="Resources\order_ticket.png" />
     <Content Include="SunnyUI.ico" />
   </ItemGroup>
   <ItemGroup />

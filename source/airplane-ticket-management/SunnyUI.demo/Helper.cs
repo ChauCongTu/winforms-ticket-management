@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -52,6 +53,28 @@ namespace Sunny.UI.Demo
             };
 
             return provinceLists;
+        }
+
+        public static string FormatVietnameseCurrency(string amount)
+        {
+            if (decimal.TryParse(amount, out decimal decimalAmount))
+            {
+                CultureInfo cultureInfoVND = new CultureInfo("vi-VN");
+                return string.Format(cultureInfoVND, "{0:C}", decimalAmount);
+            }
+
+            return "Invalid input";
+        }
+
+        public string FormatUSCurrency(string amount)
+        {
+            if (decimal.TryParse(amount, out decimal decimalAmount))
+            {
+                CultureInfo cultureInfoUSD = new CultureInfo("en-US");
+                return string.Format(cultureInfoUSD, "{0:C}", decimalAmount);
+            }
+
+            return "Invalid input";
         }
 
     }

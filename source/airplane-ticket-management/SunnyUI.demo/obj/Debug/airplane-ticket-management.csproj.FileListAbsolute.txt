@@ -201,3 +201,6 @@ D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.De
 D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.UserCtrl.ucEmployee.resources
 D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.NForm.Flights.Transits.TransitFrame.resources
 D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.NForm.Flights.Transits.Add.resources
+D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.UserCtrl.ucTicket.resources
+D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.NForm.Tickets.add.resources
+D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.NForm.Tickets.edit.resources
