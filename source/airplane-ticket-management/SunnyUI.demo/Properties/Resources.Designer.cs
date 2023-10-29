@@ -593,6 +593,16 @@ namespace Sunny.UI.Demo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap order_ticket {
+            get {
+                object obj = ResourceManager.GetObject("order_ticket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap parma {
             get {
                 object obj = ResourceManager.GetObject("parma", resourceCulture);

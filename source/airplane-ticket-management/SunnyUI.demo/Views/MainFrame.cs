@@ -44,6 +44,11 @@ namespace Sunny.UI.Demo.Views
                 mainPanel.Controls.Clear();
                 mainPanel.Controls.Add(new ucFlight());
             }
+            else if (node.Tag.ToString() == "QLV")
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(new ucTicket());
+            }
             else
             {
                 mainPanel.Controls.Clear();
