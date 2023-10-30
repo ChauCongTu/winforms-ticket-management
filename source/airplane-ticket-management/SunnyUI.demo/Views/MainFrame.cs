@@ -49,6 +49,18 @@ namespace Sunny.UI.Demo.Views
                 mainPanel.Controls.Clear();
                 mainPanel.Controls.Add(new ucTicket());
             }
+            else if (node.Tag.ToString() == "QLNV")
+            {
+                if (myProfile.Role == "admin")
+                {
+                    mainPanel.Controls.Clear();
+                    mainPanel.Controls.Add(new ucTicket());
+                }
+                else
+                {
+                    MessageBox.Show("Bạn không đủ thẩm quyền để truy cập vào đây!", "Warning");
+                }
+            }
             else
             {
                 mainPanel.Controls.Clear();
