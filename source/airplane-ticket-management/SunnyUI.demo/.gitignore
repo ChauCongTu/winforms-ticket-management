@@ -1,0 +1,14 @@
+.vs/
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.dll.config
+*.suo
+*.user
+*.sln.docstates
+*.log
+*.txt
+*.log.*
+DAO/DBConnection.cs
