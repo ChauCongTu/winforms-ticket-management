@@ -1,2 +1,17 @@
 bin/
 test.txt
+.vscode/
+obj/
+*.exe
+*.dll
+*.pdb
+*.dll.config
+*.suo
+*.user
+*.sln.docstates
+*.log
+*.txt
+*.log.*
+*.swp
+*~
+DBConnection.cs
