@@ -15,3 +15,5 @@ obj/
 *.swp
 *~
 DBConnection.cs
+.vs/
+source/airplane-ticket-management/.vs/
