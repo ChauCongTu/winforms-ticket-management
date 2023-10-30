@@ -37,20 +37,20 @@
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.uiPanel3 = new Sunny.UI.UIPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.uiLabel6 = new Sunny.UI.UILabel();
             this.lbl_Chuyenbay = new Sunny.UI.UILabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.uiLabel5 = new Sunny.UI.UILabel();
             this.lbl_Doanhthu = new Sunny.UI.UILabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.uiLabel4 = new Sunny.UI.UILabel();
             this.lbl_Khachhang = new Sunny.UI.UILabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.lbl_Nhanvien = new Sunny.UI.UILabel();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
-            this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
-            this.uiComboBox1 = new Sunny.UI.UIComboBox();
             this.uiButton1 = new Sunny.UI.UIButton();
+            this.cb_Chucnang = new Sunny.UI.UIComboBox();
             this.uiPanel1.SuspendLayout();
             this.uiPanel3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -197,6 +197,18 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chuyến bay";
             // 
+            // uiLabel6
+            // 
+            this.uiLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLabel6.Location = new System.Drawing.Point(70, 110);
+            this.uiLabel6.Name = "uiLabel6";
+            this.uiLabel6.Size = new System.Drawing.Size(66, 23);
+            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel6.TabIndex = 4;
+            this.uiLabel6.Text = "chuyến";
+            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // lbl_Chuyenbay
             // 
             this.lbl_Chuyenbay.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,6 +233,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Doanh thu";
             // 
+            // uiLabel5
+            // 
+            this.uiLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLabel5.Location = new System.Drawing.Point(75, 110);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(56, 23);
+            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel5.TabIndex = 3;
+            this.uiLabel5.Text = "triệu";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // lbl_Doanhthu
             // 
             this.lbl_Doanhthu.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,6 +268,18 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Khách hàng";
+            // 
+            // uiLabel4
+            // 
+            this.uiLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiLabel4.Location = new System.Drawing.Point(75, 110);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(56, 23);
+            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel4.TabIndex = 2;
+            this.uiLabel4.Text = "người";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // lbl_Khachhang
             // 
@@ -294,46 +330,10 @@
             this.lbl_Nhanvien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_Nhanvien.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel4
-            // 
-            this.uiLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(75, 110);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(56, 23);
-            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel4.TabIndex = 2;
-            this.uiLabel4.Text = "người";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel5
-            // 
-            this.uiLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(75, 110);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(56, 23);
-            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel5.TabIndex = 3;
-            this.uiLabel5.Text = "triệu";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel6
-            // 
-            this.uiLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(70, 110);
-            this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(66, 23);
-            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel6.TabIndex = 4;
-            this.uiLabel6.Text = "chuyến";
-            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // uiGroupBox1
             // 
             this.uiGroupBox1.Controls.Add(this.uiButton1);
-            this.uiGroupBox1.Controls.Add(this.uiComboBox1);
+            this.uiGroupBox1.Controls.Add(this.cb_Chucnang);
             this.uiGroupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiGroupBox1.Location = new System.Drawing.Point(0, 355);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -347,27 +347,6 @@
             this.uiGroupBox1.TitleAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.uiGroupBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiComboBox1
-            // 
-            this.uiComboBox1.DataSource = null;
-            this.uiComboBox1.FillColor = System.Drawing.Color.White;
-            this.uiComboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiComboBox1.Items.AddRange(new object[] {
-            "Thống kê khách hàng ",
-            "Thống kê chuyến bay",
-            "Thống kê doanh số bán vé",
-            "Thống kê lợi nhuận"});
-            this.uiComboBox1.Location = new System.Drawing.Point(202, 69);
-            this.uiComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBox1.Name = "uiComboBox1";
-            this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(241, 29);
-            this.uiComboBox1.TabIndex = 0;
-            this.uiComboBox1.Text = "Chọn chức năng";
-            this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // uiButton1
             // 
             this.uiButton1.BackColor = System.Drawing.Color.White;
@@ -380,6 +359,28 @@
             this.uiButton1.TabIndex = 1;
             this.uiButton1.Text = "Xác nhận";
             this.uiButton1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            // 
+            // cb_Chucnang
+            // 
+            this.cb_Chucnang.DataSource = null;
+            this.cb_Chucnang.FillColor = System.Drawing.Color.White;
+            this.cb_Chucnang.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.cb_Chucnang.Items.AddRange(new object[] {
+            "Thống kê khách hàng",
+            "Thống kê chuyến bay",
+            "Thống kê doanh số bán vé",
+            "Thống kê lợi nhuận"});
+            this.cb_Chucnang.Location = new System.Drawing.Point(202, 69);
+            this.cb_Chucnang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cb_Chucnang.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cb_Chucnang.Name = "cb_Chucnang";
+            this.cb_Chucnang.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cb_Chucnang.Size = new System.Drawing.Size(241, 29);
+            this.cb_Chucnang.TabIndex = 0;
+            this.cb_Chucnang.Text = "Chọn chức năng";
+            this.cb_Chucnang.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cb_Chucnang.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // ucStatistical
             // 
@@ -427,7 +428,7 @@
         private UILabel uiLabel5;
         private UILabel uiLabel4;
         private UIGroupBox uiGroupBox1;
-        private UIComboBox uiComboBox1;
+        private UIComboBox cb_Chucnang;
         private UIButton uiButton1;
     }
 }

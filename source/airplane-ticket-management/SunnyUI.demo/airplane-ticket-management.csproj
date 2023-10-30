@@ -428,6 +428,30 @@
     <Compile Include="Views\NForm\Flights\ShowDetail.Designer.cs">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Statistics\Statistical_Profit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Statistics\Statistical_Profit.Designer.cs">
+      <DependentUpon>Statistical_Profit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Statistics\Statistical_Ticket_Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Statistics\Statistical_Ticket_Sales.Designer.cs">
+      <DependentUpon>Statistical_Ticket_Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Statistics\Statistical_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Statistics\Statistical_Customer.Designer.cs">
+      <DependentUpon>Statistical_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Statistics\Statistical_Flight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Statistics\Statistical_Flight.Designer.cs">
+      <DependentUpon>Statistical_Flight.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserCtrl\ucStatistical.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -650,6 +674,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NForm\Flights\ShowDetail.resx">
       <DependentUpon>ShowDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Statistics\Statistical_Customer.resx">
+      <DependentUpon>Statistical_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Statistics\Statistical_Flight.resx">
+      <DependentUpon>Statistical_Flight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Statistics\Statistical_Profit.resx">
+      <DependentUpon>Statistical_Profit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Statistics\Statistical_Ticket_Sales.resx">
+      <DependentUpon>Statistical_Ticket_Sales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucStatistical.resx">
       <DependentUpon>ucStatistical.cs</DependentUpon>

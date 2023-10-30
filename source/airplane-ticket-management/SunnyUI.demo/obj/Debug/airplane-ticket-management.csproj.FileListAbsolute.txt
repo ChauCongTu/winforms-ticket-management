@@ -276,3 +276,7 @@ C:\Users\User\Desktop\Code\Code1\Phantich_tk_HDT\winforms-ticket-management\sour
 C:\Users\User\Desktop\Code\Code1\Phantich_tk_HDT\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\SunnyUI.Demo.exe
 C:\Users\User\Desktop\Code\Code1\Phantich_tk_HDT\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\SunnyUI.Demo.pdb
 C:\Users\User\Desktop\Code\Code1\Phantich_tk_HDT\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.UserCtrl.ucStatistical.resources
+C:\Users\User\Desktop\Code\Code1\Phantich_tk_HDT\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.NForm.Statistics.Statistical_Customer.resources
+C:\Users\User\Desktop\Code\Code1\Phantich_tk_HDT\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.NForm.Statistics.Statistical_Flight.resources
+C:\Users\User\Desktop\Code\Code1\Phantich_tk_HDT\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.NForm.Statistics.Statistical_Profit.resources
+C:\Users\User\Desktop\Code\Code1\Phantich_tk_HDT\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\Sunny.UI.Demo.Views.NForm.Statistics.Statistical_Ticket_Sales.resources
