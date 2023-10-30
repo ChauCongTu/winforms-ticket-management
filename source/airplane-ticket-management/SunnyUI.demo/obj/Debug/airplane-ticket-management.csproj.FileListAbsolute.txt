@@ -285,3 +285,5 @@ E:\Ky_1_nam_4\PTTKHDT\CourseProject\winforms-ticket-management\source\airplane-t
 E:\Ky_1_nam_4\PTTKHDT\CourseProject\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\airplane-ticket-management.csproj.CopyComplete
 E:\Ky_1_nam_4\PTTKHDT\CourseProject\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\SunnyUI.Demo.exe
 E:\Ky_1_nam_4\PTTKHDT\CourseProject\winforms-ticket-management\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\SunnyUI.Demo.pdb
+D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\Bin\SunnyUI.Demo.exe.config
+D:\KI_1_2023_2024\UML\CourseProject\source\airplane-ticket-management\SunnyUI.Demo\obj\Debug\airplane-ticket-management.csproj.SuggestedBindingRedirects.cache
