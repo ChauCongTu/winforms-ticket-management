@@ -1,0 +1,7 @@
+source/airplane-ticket-management/.vs/*
+source/airplane-ticket-management/SunnyUI.demo/Bin/*
+source/airplane-ticket-management/SunnyUI.demo/obj/*
+*.suo
+*.txt
+*.log
+source/airplane-ticket-management/SunnyUI.demo/DAO/DBConnection.cs
