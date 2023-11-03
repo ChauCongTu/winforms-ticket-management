@@ -11,6 +11,10 @@ namespace Sunny.UI.Demo
 {
     public class Helper
     {
+        public static string GetCoordinates(string address)
+        {
+            return "10.81879 Lat - 106.651802 Lon";
+        }
         public void dbError()
         {
             string message = "Có lỗi xảy ra, vui lòng thử lại!\nNếu lỗi vẫn tiếp tục xảy ra, báo lỗi cho kỹ thuật";
@@ -108,6 +112,11 @@ namespace Sunny.UI.Demo
         public static bool IsAlphabetic(string input)
         {
             string pattern = @"^[a-zA-Z]+$";
+            return Regex.IsMatch(input, pattern);
+        }
+        public static bool IsPlaneCode(string input)
+        {
+            string pattern = @"^[A-Z]+-\d+$";
             return Regex.IsMatch(input, pattern);
         }
     }

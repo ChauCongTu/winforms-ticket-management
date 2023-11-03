@@ -124,5 +124,62 @@ namespace Sunny.UI.Demo.DAO
             command.ExecuteNonQuery();
             _conn.Close();
         }
+
+        public bool isExists(string plane_code)
+        {
+            int hasRow = 0;
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"select count(*) from airplanes where airplane_number = {plane_code}", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return false;
+            }
+
+            while (reader.Read())
+            {
+                hasRow = reader.GetInt32(0);
+            }
+            _conn.Close();
+            if (hasRow != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public List<Airplane> GetByAirplaneNumb(String AirplaneNumb)
+        {
+            List<Airplane> list = new List<Airplane>();
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"SELECT * FROM airplanes where airplane_number like '%{AirplaneNumb}%' or airplane_type like '%{AirplaneNumb}%'", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return list;
+            }
+
+            while (reader.Read())
+            {
+                int id = reader.GetInt32(0);
+                string name = reader.GetString(1);
+                string desc = reader.GetString(2);
+                string code = reader.GetString(3);
+                int numb = reader.GetInt32(4);
+                Airplane airplane = new Airplane(id, name, desc, code, numb);
+                list.Add(airplane);
+            }
+            return list;
+        }
     }
 }

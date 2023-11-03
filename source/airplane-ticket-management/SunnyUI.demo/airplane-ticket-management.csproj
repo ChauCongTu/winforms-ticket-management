@@ -422,6 +422,48 @@
     <Compile Include="Views\NForm\Airlines\edit.Designer.cs">
       <DependentUpon>edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Airplanes\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airplanes\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Airplanes\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airplanes\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Airport\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airport\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Airport\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airport\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\detail.Designer.cs">
+      <DependentUpon>detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NForm\Flights\ShowDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -487,6 +529,18 @@
     </Compile>
     <Compile Include="Views\UserCtrl\ucQuanLyHang.Designer.cs">
       <DependentUpon>ucQuanLyHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucQuanlymaybay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucQuanlymaybay.Designer.cs">
+      <DependentUpon>ucQuanlymaybay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucQuanLySanBay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucQuanLySanBay.Designer.cs">
+      <DependentUpon>ucQuanLySanBay.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserCtrl\ucTicket.cs">
       <SubType>UserControl</SubType>
@@ -672,6 +726,27 @@
     <EmbeddedResource Include="Views\NForm\Airlines\edit.resx">
       <DependentUpon>edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airplanes\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airplanes\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airport\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airport\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Employees\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Employees\detail.resx">
+      <DependentUpon>detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Employees\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\NForm\Flights\ShowDetail.resx">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -704,6 +779,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucQuanLyHang.resx">
       <DependentUpon>ucQuanLyHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucQuanlymaybay.resx">
+      <DependentUpon>ucQuanlymaybay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucQuanLySanBay.resx">
+      <DependentUpon>ucQuanLySanBay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucTicket.resx">
       <DependentUpon>ucTicket.cs</DependentUpon>
