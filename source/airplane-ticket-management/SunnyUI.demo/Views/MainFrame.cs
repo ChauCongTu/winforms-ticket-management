@@ -53,6 +53,16 @@ namespace Sunny.UI.Demo.Views
                 mainPanel.Controls.Clear();
                 mainPanel.Controls.Add(new ucStatistical());
             }
+            else if (node.Tag.ToString() == "QLSB")
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(new ucQuanLySanBay());
+            }
+            else if (node.Tag.ToString() == "QLMB")
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(new ucQuanlymaybay());
+            }
             else if (node.Tag.ToString() == "QLV")
             {
                 mainPanel.Controls.Clear();
@@ -68,7 +78,7 @@ namespace Sunny.UI.Demo.Views
                 if (myProfile.Role == "admin")
                 {
                     mainPanel.Controls.Clear();
-                    mainPanel.Controls.Add(new ucTicket());
+                    mainPanel.Controls.Add(new ucEmployee());
                 }
                 else
                 {
