@@ -56,7 +56,7 @@ namespace Sunny.UI.Demo.Views.NForm.Employees
                 lbErrName.ForeColor = Color.Red;
                 err++;
             }
-            else if (txtName.Text.Length > 20)
+            else if (txtName.Text.Length > 100)
             {
                 lbErrName.Text = "Nhập quá ký tự giới hạn ";
                 lbErrName.ForeColor = Color.Red;
@@ -69,7 +69,7 @@ namespace Sunny.UI.Demo.Views.NForm.Employees
                 lbErrEmail.ForeColor = Color.Red;
                 err++;
             }
-            else if (txtEmail.Text.Length > 20)
+            else if (txtEmail.Text.Length > 100)
             {
                 lbErrEmail.Text = "Nhập quá ký tự giới hạn ";
                 lbErrEmail.ForeColor = Color.Red;
@@ -88,7 +88,7 @@ namespace Sunny.UI.Demo.Views.NForm.Employees
                 lbErrPassword.ForeColor = Color.Red;
                 err++;
             }
-            else if (txtPassword.Text.Length > 20)
+            else if (txtPassword.Text.Length > 100)
             {
                 lbErrPassword.Text = "Nhập quá ký tự giới hạn ";
                 lbErrPassword.ForeColor = Color.Red;
@@ -113,7 +113,7 @@ namespace Sunny.UI.Demo.Views.NForm.Employees
                 lbErrAddress.ForeColor = Color.Red;
                 err++;
             }
-            else if (rtxtAddress.Text.Length > 50)
+            else if (rtxtAddress.Text.Length > 100)
             {
                 lbErrAddress.Text = "Nhập quá ký tự giới hạn";
                 lbErrAddress.ForeColor = Color.Red;

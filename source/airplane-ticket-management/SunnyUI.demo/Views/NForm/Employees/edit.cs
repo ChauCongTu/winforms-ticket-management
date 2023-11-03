@@ -60,7 +60,7 @@ namespace Sunny.UI.Demo.Views.NForm.Employees
                 lbErrName.ForeColor = Color.Red;
                 err++;
             }
-            else if (txtName.Text.Length > 20)
+            else if (txtName.Text.Length > 100)
             {
                 lbErrName.Text = "Nhập quá ký tự giới hạn ";
                 lbErrName.ForeColor = Color.Red;
@@ -73,7 +73,7 @@ namespace Sunny.UI.Demo.Views.NForm.Employees
                 lbErrEmail.ForeColor = Color.Red;
                 err++;
             }
-            else if (txtEmail.Text.Length > 20)
+            else if (txtEmail.Text.Length > 100)
             {
                 lbErrEmail.Text = "Nhập quá ký tự giới hạn ";
                 lbErrEmail.ForeColor = Color.Red;
@@ -92,7 +92,7 @@ namespace Sunny.UI.Demo.Views.NForm.Employees
                 lbErrPhoneNumb.ForeColor = Color.Red;
                 err++;
             }
-            else if (txtSDT.Text.Length <= 8 || txtSDT.Text.Length > 11)
+            else if (txtSDT.Text.Length <= 8 || txtSDT.Text.Length > 12)
             {
                 lbErrPhoneNumb.Text = "Số điện thoại không phù hợp";
                 lbErrPhoneNumb.ForeColor = Color.Red;
@@ -104,7 +104,7 @@ namespace Sunny.UI.Demo.Views.NForm.Employees
                 lbErrAddress.ForeColor = Color.Red;
                 err++;
             }
-            else if (rtxtAddress.Text.Length > 50)
+            else if (rtxtAddress.Text.Length > 200)
             {
                 lbErrAddress.Text = "Nhập quá ký tự giới hạn";
                 lbErrAddress.ForeColor = Color.Red;
