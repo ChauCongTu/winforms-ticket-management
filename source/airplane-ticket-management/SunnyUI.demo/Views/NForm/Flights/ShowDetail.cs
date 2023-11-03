@@ -277,5 +277,14 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
             cbFrom.ValueMember = "AirportId";
             cbFrom.DisplayMember = "AirportName";
         }
+
+        private void ShowDetail_Load(object sender, EventArgs e)
+        {
+            if (flight.DepartureTime.Value < DateTime.Now)
+            {
+                btnEdit.BringToFront();
+                btnEdit.Enabled = false;
+            }
+        }
     }
 }

@@ -57,8 +57,8 @@ namespace Sunny.UI.Demo.DAO
                 {
                     flightDate = reader.GetDateTime(7);
                 }
-                int totalTickets = reader.GetInt32(8);
-                int remainingTickets = reader.GetInt32(9);
+                int totalTickets = new DAO_Ticket().getTotalTicket(flightId);
+                int remainingTickets = new DAO_Ticket().getRemainTicket(flightId);
                 int transits = reader.GetInt32(10);
                 int airplaneId = reader.GetInt32(11);
                 string status = reader.GetString(12);
@@ -123,8 +123,8 @@ namespace Sunny.UI.Demo.DAO
                 {
                     flightDate = reader.GetDateTime(7);
                 }
-                int totalTickets = reader.GetInt32(8);
-                int remainingTickets = reader.GetInt32(9);
+                int totalTickets = new DAO_Ticket().getTotalTicket(flightId);
+                int remainingTickets = new DAO_Ticket().getRemainTicket(flightId);
                 int transits = reader.GetInt32(10);
                 int airplaneId = reader.GetInt32(11);
                 string status = reader.GetString(12);
@@ -183,8 +183,8 @@ namespace Sunny.UI.Demo.DAO
                 {
                     flightDate = reader.GetDateTime(7);
                 }
-                int totalTickets = reader.GetInt32(8);
-                int remainingTickets = reader.GetInt32(9);
+                int totalTickets = new DAO_Ticket().getTotalTicket(flightId);
+                int remainingTickets = new DAO_Ticket().getRemainTicket(flightId);
                 int transits = reader.GetInt32(10);
                 int airplaneId = reader.GetInt32(11);
                 string status = reader.GetString(12);
@@ -244,8 +244,8 @@ namespace Sunny.UI.Demo.DAO
                 {
                     flightDate = reader.GetDateTime(7);
                 }
-                int totalTickets = reader.GetInt32(8);
-                int remainingTickets = reader.GetInt32(9);
+                int totalTickets = new DAO_Ticket().getTotalTicket(flightId);
+                int remainingTickets = new DAO_Ticket().getRemainTicket(flightId);
                 int transits = reader.GetInt32(10);
                 int airplaneId = reader.GetInt32(11);
                 string status = reader.GetString(12);
@@ -305,8 +305,8 @@ namespace Sunny.UI.Demo.DAO
                 {
                     flightDate = reader.GetDateTime(7);
                 }
-                int totalTickets = reader.GetInt32(8);
-                int remainingTickets = reader.GetInt32(9);
+                int totalTickets = new DAO_Ticket().getTotalTicket(flightId);
+                int remainingTickets = new DAO_Ticket().getRemainTicket(flightId);
                 int transits = reader.GetInt32(10);
                 int airplaneId = reader.GetInt32(11);
                 string status = reader.GetString(12);

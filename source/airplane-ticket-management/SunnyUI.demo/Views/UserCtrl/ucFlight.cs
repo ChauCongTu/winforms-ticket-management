@@ -35,6 +35,7 @@ namespace Sunny.UI.Demo.Views.UserCtrl
         {
             cbFrom.DataSource = Helper.LoadProvince();
             cbTo.DataSource = Helper.LoadProvince();
+            cbTo.SelectedItem = "Ho Chi Minh City";
             table_load();
         }
 

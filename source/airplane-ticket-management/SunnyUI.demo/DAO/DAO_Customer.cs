@@ -95,6 +95,44 @@ namespace Sunny.UI.Demo.DAO
             return customer;
         }
 
+        public Customer getByIdNumber(string id_number)
+        {
+            Customer customer = new Customer();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT * FROM customers WHERE id_number = '{id_number}'", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return customer;
+            }
+
+            while (reader.Read())
+            {
+                int customerId = reader.GetInt32(0);
+                string customerName = reader.GetString(1);
+                string phoneNumber = reader.GetString(2);
+                string emailAddress = reader.GetString(3);
+                string idNumber = reader.GetString(4);
+                string gender = reader.GetString(5);
+
+                DateTime? dateOfBirth = null;
+                if (!reader.IsDBNull(6))
+                {
+                    dateOfBirth = reader.GetDateTime(6);
+                }
+
+                customer = new Customer(customerId, customerName, phoneNumber, emailAddress, idNumber, gender, dateOfBirth);
+            }
+
+            _conn.Close();
+            return customer;
+        }
+
         public Customer getByCustomerID(string ID)
         {
             Customer customer = new Customer();

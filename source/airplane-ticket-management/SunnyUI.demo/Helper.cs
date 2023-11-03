@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Sunny.UI.Demo.Model;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -17,6 +19,24 @@ namespace Sunny.UI.Demo
             string title = "Có lỗi xảy ra";
             MessageBox.Show(message, title);
         }
+
+        public void dbError(string exception)
+        {
+            string message = "Có lỗi xảy ra, vui lòng thử lại!\nNếu lỗi vẫn tiếp tục xảy ra, báo lỗi cho kỹ thuật" + exception;
+            string title = "Có lỗi xảy ra";
+            MessageBox.Show(message, title);
+        }
+
+        public static string GenerateBookingCode()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            Random random = new Random();
+            string bookingCode = new string(Enumerable.Repeat(chars, 6)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+
+            return bookingCode;
+        }
+
         public static string GetMD5(string plainText)
         {
             MD5 md5 = new MD5CryptoServiceProvider();
@@ -53,6 +73,22 @@ namespace Sunny.UI.Demo
             };
 
             return provinceLists;
+        }
+
+        public static string BookingTicketMailContent(TransactionResponse response)
+        {
+            Content content = new Content(
+                response.customer.CustomerName,
+                response.BookingCode.ToString(),
+                new DAO.DAO_Airline().getByPlaneId(response.flight.Airplane.AirplaneId).AirlineName.ToString(),
+                response.flight.Airplane.AirplaneNumber,
+                response.flight.DepartureTime.Value.ToString("HH:mm"),
+                response.flight.DepartureTime.Value.ToString("dd/MM/yyyy"),
+                response.flight.DeparturePoint.ToString(),
+                response.flight.DepartureAirport.AirportName,
+                response.flight.Destination.ToString(),
+                response.flight.DestinationAirport.AirportName);
+            return content.rawContent;
         }
 
         public static string FormatVietnameseCurrency(string amount)
@@ -109,6 +145,189 @@ namespace Sunny.UI.Demo
         {
             string pattern = @"^[a-zA-Z]+$";
             return Regex.IsMatch(input, pattern);
+        }
+    }
+    public class NMailer
+    {
+        private static readonly string _from = "mixivivu.booking@gmail.com"; // Email của Sender (của bạn)
+        private static readonly string _pass = "bxpfqdyldpzjupde"; // Mật khẩu Email của Sender (của bạn)
+
+        public static string Send(string sendto, string subject, string content)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress(_from, "Mixivivu Booking");
+                mail.To.Add(sendto);
+                mail.Subject = subject;
+                mail.IsBodyHtml = true;
+                mail.Body = content;
+
+                mail.Priority = MailPriority.High;
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential(_from, _pass);
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+                return "OK";
+            }
+            catch (Exception ex)
+            {
+                return ex.ToString();
+            }
+
+        }
+    }
+    public class Content
+    {
+        public string rawContent;
+
+        public Content(string name, string bookingCode, string airlineName, string airplaneNumber, string timeFlight, string dateFlight, string departurePoint, string departureAirport, string destination, string destinationAirport)
+        {
+            string Header = @"<!DOCTYPE html>
+                        <html lang=""vi"">
+                        <head>
+                            <meta charset=""UTF-8"">
+                            <title>Vé máy bay</title>
+                            <style>
+                                * {
+                                    margin: 0;
+                                    padding: 0;
+                                }
+
+                                body {
+                                    background-color: #333;
+                                    font-family: sans-serif;
+                                    font-size: 16px;
+                                }
+
+                                .container {
+                                    background-color: #fff;
+                                    width: 600px;
+                                    margin: 0 auto;
+                                    padding-left: 10px;
+                                    padding-right: 10px;
+                                }
+
+                                .header {
+                                    background-color: #0099ff;
+                                    color: #fff;
+                                    padding: 20px;
+                                }
+
+                                .header h1 {
+                                    font-size: 24px;
+                                    margin-bottom: 0;
+                                }
+
+                                .content {
+                                    padding: 20px;
+                                }
+
+                                .content table {
+                                    width: 100%;
+                                    border-collapse: collapse;
+                                }
+
+                                .content table th,
+                                .content table td {
+                                    border: 1px solid #ccc;
+                                    padding: 10px;
+                                }
+
+                                .content table th {
+                                    text-align: left;
+                                }
+
+                                .content .info {
+                                    margin-top: 20px;
+                                }
+
+                                .content .info p {
+                                    margin-bottom: 0;
+                                }
+
+                                .content .info span {
+                                    font-size: 12px;
+                                }
+
+                                .footer {
+                                    background-color: #ccc;
+                                    padding: 20px;
+                                }
+                            </style>
+                        </head>";
+
+            string Body = $@"<body>
+                            <div class=""container"">
+                                <center>
+                                    <img width=""100%"" src=""https://cdn.discordapp.com/attachments/1100753623849377835/1169892695985115136/mixivivu2.png?ex=65570e7a&is=6544997a&hm=5dd00bfb881debdaa56ca58b57c3ae4618e5d88185ea003a089042629b03fb32&"" alt=""mixivivu"">
+                                    <h1>Vé đặt chỗ điện tử của quý khách</h1>
+                                </center>
+        
+                                <div class=""content"">
+                                    <div class=""info"" style=""padding-bottom: 20px;"">
+                                        <h3>Kính chào {name}</h3>
+                                        <p>
+                                            Yêu cầu đặt vé của quý khách đã được xác nhận thành công. Quý khách vui lòng xem vé điện tử trong tập tin đính kèm.
+                                        </p>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <th>Mã đặt chỗ</th>
+                                            <td>{bookingCode}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Hãng hàng không</th>
+                                            <td>{airlineName}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Số hiệu chuyến bay</th>
+                                            <td>{airplaneNumber}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Thời gian khởi hành</th>
+                                            <td>{timeFlight}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Ngày khởi hành</th>
+                                            <td>{dateFlight}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Thành phố khởi hành</th>
+                                            <td>{departurePoint}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sân bay khởi hành</th>
+                                            <td>{departureAirport}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Thành phố đến</th>
+                                            <td>{destination}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Sân bay đến</th>
+                                            <td>{destinationAirport}</td>
+                                        </tr>
+                                    </table>
+                                    <div class=""info"">
+                                        <p>Quý khách cần có mặt ở sân bay trước giờ bay khoảng 45 phút để tiến hành làm các thủ tục checkin, kiểm tra an ninh.</p>
+                                        <span>Trân trọng,</span>
+                                        <span>{airlineName}</span>
+                                    </div>
+                                </div>
+                                <div class=""footer"">
+                                    <p>© 2023 Mixivivu</p>
+                                </div>
+                            </div>
+                        </body>
+
+                        </html>";
+            this.rawContent = Header + Body;
+
         }
     }
 }

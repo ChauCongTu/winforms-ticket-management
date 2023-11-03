@@ -64,10 +64,11 @@
             // 
             this.uiMarkLabel1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiMarkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.uiMarkLabel1.Location = new System.Drawing.Point(281, 11);
+            this.uiMarkLabel1.Location = new System.Drawing.Point(375, 14);
+            this.uiMarkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uiMarkLabel1.Name = "uiMarkLabel1";
-            this.uiMarkLabel1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.uiMarkLabel1.Size = new System.Drawing.Size(312, 60);
+            this.uiMarkLabel1.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
+            this.uiMarkLabel1.Size = new System.Drawing.Size(416, 74);
             this.uiMarkLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiMarkLabel1.TabIndex = 14;
             this.uiMarkLabel1.Text = "THỐNG KÊ - DOANH THU";
@@ -81,11 +82,11 @@
             this.uiPanel1.Controls.Add(this.uiLabel1);
             this.uiPanel1.Controls.Add(this.uiDatetimePicker1);
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel1.Location = new System.Drawing.Point(0, 80);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.Location = new System.Drawing.Point(0, 98);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(874, 50);
+            this.uiPanel1.Size = new System.Drawing.Size(1165, 62);
             this.uiPanel1.TabIndex = 15;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,12 +156,12 @@
             // uiPanel2
             // 
             this.uiPanel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel2.Location = new System.Drawing.Point(434, 80);
-            this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel2.Location = new System.Drawing.Point(579, 98);
+            this.uiPanel2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel2.Name = "uiPanel2";
             this.uiPanel2.Radius = 4;
-            this.uiPanel2.Size = new System.Drawing.Size(6, 50);
+            this.uiPanel2.Size = new System.Drawing.Size(8, 62);
             this.uiPanel2.TabIndex = 18;
             this.uiPanel2.Text = null;
             this.uiPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,12 +174,12 @@
             this.uiPanel3.Controls.Add(this.groupBox2);
             this.uiPanel3.Controls.Add(this.groupBox1);
             this.uiPanel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel3.Location = new System.Drawing.Point(0, 131);
-            this.uiPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel3.Location = new System.Drawing.Point(0, 161);
+            this.uiPanel3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
             this.uiPanel3.RectColor = System.Drawing.Color.Black;
-            this.uiPanel3.Size = new System.Drawing.Size(874, 224);
+            this.uiPanel3.Size = new System.Drawing.Size(1165, 276);
             this.uiPanel3.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel3.TabIndex = 19;
             this.uiPanel3.Text = null;
@@ -335,12 +336,12 @@
             this.uiGroupBox1.Controls.Add(this.uiButton1);
             this.uiGroupBox1.Controls.Add(this.cb_Chucnang);
             this.uiGroupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiGroupBox1.Location = new System.Drawing.Point(0, 355);
-            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox1.Location = new System.Drawing.Point(0, 437);
+            this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
-            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(873, 159);
+            this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 39, 0, 0);
+            this.uiGroupBox1.Size = new System.Drawing.Size(1164, 196);
             this.uiGroupBox1.TabIndex = 20;
             this.uiGroupBox1.Text = "Chức năng";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -384,7 +385,7 @@
             // 
             // ucStatistical
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.uiGroupBox1);
@@ -392,8 +393,9 @@
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiMarkLabel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucStatistical";
-            this.Size = new System.Drawing.Size(874, 519);
+            this.Size = new System.Drawing.Size(1165, 639);
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);

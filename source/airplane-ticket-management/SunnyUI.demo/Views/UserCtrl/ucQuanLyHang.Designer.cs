@@ -177,7 +177,7 @@
             // uiButton1
             // 
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiButton1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiButton1.Location = new System.Drawing.Point(953, 572);
             this.uiButton1.Margin = new System.Windows.Forms.Padding(4);
             this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -191,7 +191,7 @@
             // uiButton2
             // 
             this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiButton2.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiButton2.Location = new System.Drawing.Point(752, 572);
             this.uiButton2.Margin = new System.Windows.Forms.Padding(4);
             this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
@@ -205,7 +205,7 @@
             // txtSearch
             // 
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(5, 572);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtSearch.MinimumSize = new System.Drawing.Size(1, 20);

@@ -80,6 +80,13 @@ namespace Sunny.UI.Demo.Views.UserCtrl
                 table_load(flight.FlightId);
                 lbFlightInfo.Text = flight.Airplane.AirplaneNumber + "\n" + flight.DeparturePoint + " - " + flight.Destination + " | Lúc: " + flight.DepartureTime.Value.ToString("HH:mm dd/MM/yyyy");
                 btnBack.Enabled = true;
+                if (flight.DepartureTime.Value < DateTime.Now)
+                {
+                    uiButton3.Enabled = false;
+                    dgvTicket.Columns[5].Visible = false;
+                    dgvTicket.Columns[6].Visible = false;
+                    dgvTicket.Columns[7].Visible = false;
+                }
             }
             else
             {
@@ -217,6 +224,10 @@ namespace Sunny.UI.Demo.Views.UserCtrl
                     table_load(flight.FlightId);
                 }
             }
+        }
+
+        private void ucTicket_Load(object sender, EventArgs e)
+        {
         }
     }
 }

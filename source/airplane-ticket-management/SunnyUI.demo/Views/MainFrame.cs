@@ -14,17 +14,21 @@ namespace Sunny.UI.Demo.Views
 {
     public partial class MainFrame : Form
     {
-        User myProfile;
+        public static User myProfile;
         public MainFrame()
         {
             InitializeComponent();
             myProfile = new DAO.DAO_User().getById(1);
+            nmAside.Nodes.Add("QLKH", "Thông tin Khách hàng");
+            nmAside.Nodes[8].Tag = "QLKH";
         }
 
         public MainFrame(User loginUser)
         {
             InitializeComponent();
             myProfile = loginUser;
+            nmAside.Nodes.Add("QLKH", "Quản lý khách hàng");
+            nmAside.Nodes[8].Tag = "QLKH";
         }
 
         private void nmAside_MenuItemClick(TreeNode node, NavMenuItem item, int pageIndex)
@@ -53,6 +57,11 @@ namespace Sunny.UI.Demo.Views
             {
                 mainPanel.Controls.Clear();
                 mainPanel.Controls.Add(new ucTicket());
+            }
+            else if (node.Tag.ToString() == "QLKH")
+            {
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(new ucCustomer());
             }
             else if (node.Tag.ToString() == "QLNV")
             {

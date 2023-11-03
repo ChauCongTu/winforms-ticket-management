@@ -422,13 +422,24 @@
     <Compile Include="Views\NForm\Airlines\edit.Designer.cs">
       <DependentUpon>edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Bookings\Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Bookings\Transactions.Designer.cs">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Customers\DetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Customers\DetailForm.Designer.cs">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NForm\Flights\ShowDetail.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\NForm\Flights\ShowDetail.Designer.cs">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Views\NForm\Statistics\Statistical_Profit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -483,8 +494,6 @@
     <Compile Include="Views\NForm\Tickets\edit.Designer.cs">
       <DependentUpon>edit.cs</DependentUpon>
     </Compile>
-
-    
     <Compile Include="Views\UserCtrl\ucBooking.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -705,10 +714,15 @@
     <EmbeddedResource Include="Views\NForm\Airlines\edit.resx">
       <DependentUpon>edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Bookings\Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Customers\DetailForm.resx">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\NForm\Flights\ShowDetail.resx">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Views\NForm\Statistics\Statistical_Customer.resx">
       <DependentUpon>Statistical_Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -736,8 +750,6 @@
     <EmbeddedResource Include="Views\NForm\Tickets\edit.resx">
       <DependentUpon>edit.cs</DependentUpon>
     </EmbeddedResource>
-
-    
     <EmbeddedResource Include="Views\UserCtrl\ucBooking.resx">
       <DependentUpon>ucBooking.cs</DependentUpon>
     </EmbeddedResource>
@@ -957,6 +969,17 @@
     <None Include="Resources\eye.png" />
     <None Include="Resources\plane-mixivivu-removebg-preview.png" />
     <None Include="Resources\order_ticket.png" />
+    <None Include="Resources\flight-ticket-5370540-4492077.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\Screenshot 2023-11-01 173330.png" />
+    <None Include="Resources\Screenshot_2023-11-01_173330-removebg-preview.png" />
+    <None Include="Resources\view-details-4 %281%291.png" />
+    <None Include="Resources\name-2-removebg-preview.png" />
+    <None Include="Resources\phone-removebg-preview.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\name.png" />
+    <None Include="Resources\gender.png" />
+    <None Include="Resources\dob.png" />
     <Content Include="SunnyUI.ico" />
   </ItemGroup>
   <ItemGroup />

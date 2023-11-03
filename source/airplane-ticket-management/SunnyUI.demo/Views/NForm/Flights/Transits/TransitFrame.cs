@@ -103,5 +103,14 @@ namespace Sunny.UI.Demo.Views.NForm.Flights.Transits
         {
             table_load();
         }
+
+        private void TransitFrame_Load(object sender, EventArgs e)
+        {
+            if (flight.DepartureTime.Value < DateTime.Now)
+            {
+                uiButton2.Enabled = false;
+                dgvTransit.Columns[3].Visible = false;
+            }
+        }
     }
 }
