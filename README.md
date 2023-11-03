@@ -46,7 +46,32 @@ git clone https://github.com/ChauCongTu/winforms-ticket-management.git
 - In your SQL Server Management Studio, create a new database for the application.
 - Locate the `data.sql` file in the repository and run it in the newly created database to populate it with initial data.
 
-4. Build and run the application from Visual Studio.
+4. Create file DBConnection.cs in DAO folder with code:
+```
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+
+namespace Sunny.UI.Demo.DAO
+{
+    public class DBConnection
+    {
+        public string _strConn = "Connection String";
+        public DBConnection()
+        {
+
+        }
+        protected SqlConnection GetConnection()
+        {
+            return new SqlConnection(_strConn);
+        }
+    }
+}
+```
+
+5. Build and run the application from Visual Studio.
 
 ### Getting Started
 

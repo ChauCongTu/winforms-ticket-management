@@ -31,4 +31,26 @@ namespace Sunny.UI.Demo.Model
         {
         }
     }
+    public class TransactionResponse
+    {
+        public string BookingCode { get; set; }
+        public DateTime BookingDate { get; set; }
+        public Ticket Ticket { get; set; }
+        public Flight flight { get; set; }
+        public Customer customer { get; set; }
+        public string note { get; set; }
+        public User Performed { get; set; }
+
+        public TransactionResponse() { }
+        public TransactionResponse(Transaction transaction)
+        {
+            BookingCode = transaction.BookingCode;
+            BookingDate = transaction.BookingDate.Value;
+            Ticket = new DAO.DAO_Ticket().getById(transaction.TicketId);
+            this.flight = new DAO.DAO_Flight().getById(this.Ticket.FlightId);
+            this.customer = transaction.Customer;
+            this.note = transaction.Note;
+            Performed = transaction.Performed;
+        }
+    }
 }
