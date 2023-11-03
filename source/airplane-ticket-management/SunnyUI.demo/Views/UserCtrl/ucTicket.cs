@@ -182,9 +182,9 @@ namespace Sunny.UI.Demo.Views.UserCtrl
         {
             DataGridViewRow row = dgvTicket.Rows[e.RowIndex];
             int id = 0;
-            if (row.Cells[0].Value != null && ValidationHelper.IsNumber(row.Cells[0].Value.ToString()) == true)
+            if (row.Cells[1].Value != null && ValidationHelper.IsNumber(row.Cells[1].Value.ToString()) == true)
             {
-                id = (int)row.Cells[0].Value;
+                id = (int)row.Cells[1].Value;
             }
             else
             {
@@ -196,6 +196,11 @@ namespace Sunny.UI.Demo.Views.UserCtrl
                 Ticket ticket = new DAO_Ticket().getById(id);
                 edit editForm = new edit(ticket);
                 editForm.ShowDialog();
+            }
+            if (e.ColumnIndex == dgvTicket.Columns["_order"].Index)
+            {
+                Ticket ticket = new DAO_Ticket().getById(id);
+                new MainFrame().BookingTicket(ticket);
             }
             else if (e.ColumnIndex == dgvTicket.Columns["_xoa"].Index)
             {

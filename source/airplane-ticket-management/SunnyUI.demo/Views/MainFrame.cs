@@ -81,6 +81,18 @@ namespace Sunny.UI.Demo.Views
             }
         }
 
+        public void BookingTicket(Flight flight)
+        {
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(new ucBooking(flight));
+        }
+
+        public void BookingTicket(Ticket ticket)
+        {
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(new ucBooking(ticket));
+        }
+
         private void MainFrame_Load(object sender, EventArgs e)
         {
             txtName.Text = myProfile.UserName;

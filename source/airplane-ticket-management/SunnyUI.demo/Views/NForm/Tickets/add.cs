@@ -49,7 +49,7 @@ namespace Sunny.UI.Demo.Views.NForm.Tickets
                 lbErr.ForeColor = Color.Red;
                 err++;
             }
-            else if (Int32.Parse(txtNumOfTicket.Text) + ticketCount > flight.TotalTickets)
+            else if (Int32.Parse(txtNumOfTicket.Text) + ticketCount > flight.Airplane.NumberOfSeats)
             {
                 lbErr.Text = "Tổng số lượng vé không được lớn hơn số ghế ngồi của máy bay";
                 err++;

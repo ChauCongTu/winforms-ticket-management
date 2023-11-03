@@ -54,18 +54,18 @@
             this.cbFromDe = new Sunny.UI.UIComboBox();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
-            this.btnAuto = new Sunny.UI.UIButton();
             this.uiLine3 = new Sunny.UI.UILine();
             this.uiLine2 = new Sunny.UI.UILine();
             this.cbStatus = new Sunny.UI.UIComboBox();
             this.uiLabel9 = new Sunny.UI.UILabel();
-            this.txtTotalTicket = new Sunny.UI.UITextBox();
             this.uiLabel8 = new Sunny.UI.UILabel();
             this.dtpTime = new Sunny.UI.UIDatetimePicker();
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.uiLine1 = new Sunny.UI.UILine();
             this.cbTo = new Sunny.UI.UIComboBox();
             this.cbFrom = new Sunny.UI.UIComboBox();
+            this.txtTotalTicket = new Sunny.UI.UITextBox();
+            this.btnAuto = new Sunny.UI.UIButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -189,11 +189,12 @@
             this.btnBooking.TabIndex = 30;
             this.btnBooking.Text = "Đặt vé";
             this.btnBooking.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnBooking.Click += new System.EventHandler(this.btnBooking_Click);
             // 
             // btnSave
             // 
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnSave.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(798, 15);
             this.btnSave.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSave.Name = "btnSave";
@@ -206,7 +207,7 @@
             // btnEdit
             // 
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(798, 15);
             this.btnEdit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnEdit.Name = "btnEdit";
@@ -424,19 +425,6 @@
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // btnAuto
-            // 
-            this.btnAuto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAuto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAuto.Location = new System.Drawing.Point(499, 256);
-            this.btnAuto.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnAuto.Name = "btnAuto";
-            this.btnAuto.Size = new System.Drawing.Size(55, 28);
-            this.btnAuto.TabIndex = 27;
-            this.btnAuto.Text = "Auto";
-            this.btnAuto.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
-            // 
             // uiLine3
             // 
             this.uiLine3.FillColor = System.Drawing.Color.White;
@@ -487,21 +475,6 @@
             this.uiLabel9.Text = "Trạng thái:";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiLabel9.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // txtTotalTicket
-            // 
-            this.txtTotalTicket.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTotalTicket.Enabled = false;
-            this.txtTotalTicket.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.txtTotalTicket.Location = new System.Drawing.Point(246, 255);
-            this.txtTotalTicket.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTotalTicket.MinimumSize = new System.Drawing.Size(1, 16);
-            this.txtTotalTicket.Name = "txtTotalTicket";
-            this.txtTotalTicket.ShowText = false;
-            this.txtTotalTicket.Size = new System.Drawing.Size(252, 29);
-            this.txtTotalTicket.TabIndex = 6;
-            this.txtTotalTicket.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtTotalTicket.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel8
             // 
@@ -590,6 +563,34 @@
             this.cbFrom.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbFrom.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // txtTotalTicket
+            // 
+            this.txtTotalTicket.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalTicket.Enabled = false;
+            this.txtTotalTicket.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.txtTotalTicket.Location = new System.Drawing.Point(246, 255);
+            this.txtTotalTicket.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTotalTicket.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtTotalTicket.Name = "txtTotalTicket";
+            this.txtTotalTicket.ShowText = false;
+            this.txtTotalTicket.Size = new System.Drawing.Size(252, 29);
+            this.txtTotalTicket.TabIndex = 6;
+            this.txtTotalTicket.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtTotalTicket.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // btnAuto
+            // 
+            this.btnAuto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAuto.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAuto.Location = new System.Drawing.Point(499, 256);
+            this.btnAuto.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnAuto.Name = "btnAuto";
+            this.btnAuto.Size = new System.Drawing.Size(55, 28);
+            this.btnAuto.TabIndex = 27;
+            this.btnAuto.Text = "Auto";
+            this.btnAuto.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnAuto.Click += new System.EventHandler(this.btnAuto_Click);
+            // 
             // ShowDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -624,7 +625,6 @@
         private System.Windows.Forms.Panel panel4;
         private UIComboBox cbStatus;
         private UILabel uiLabel9;
-        private UITextBox txtTotalTicket;
         private UILabel uiLabel8;
         private UIDatetimePicker dtpTime;
         private UILabel uiLabel7;
@@ -648,11 +648,12 @@
         private UIButton btnSave;
         private UIButton btnEdit;
         private UILabel lbErr;
-        private UIButton btnAuto;
         private UILabel uiLabel6;
         private UILabel uiLabel4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UIComboBox cbToDe;
         private UIComboBox cbFromDe;
+        private UIButton btnAuto;
+        private UITextBox txtTotalTicket;
     }
 }

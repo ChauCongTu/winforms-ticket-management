@@ -230,6 +230,8 @@ namespace Sunny.UI.Demo.Views.UserCtrl
                 }
                 MessageBox.Show("Đặt chỗ thành công, mã đặt chỗ của bạn là: " + bookingCode + ".\nPhiếu đặt chỗ điện tử sẽ được gửi vào Email của bạn.");
                 NMailer.Send(customer.EmailAddress, "[MIXIVIVU] Vé Máy Bay Điện Tử - Mã Đặt Chỗ " + bookingCode, Helper.BookingTicketMailContent(new TransactionResponse(transaction)));
+                int index = loadTicket(Int32.Parse(txtFlightId.Text), Int32.Parse(cbClass.SelectedValue.ToString()));
+                lbRemainTicket.Text = "(Còn " + index + " vé)";
             }
         }
 

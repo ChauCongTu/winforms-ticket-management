@@ -29,7 +29,6 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
             cbFrom.Enabled = true;
             cbTo.Enabled = true;
             dtpTime.Enabled = true;
-            txtTotalTicket.Enabled = true;
             cbAirline.Enabled = true;
             cbAirline.DataSource = new DAO_Airline().getAll();
             cbStatus.Text = "Hoạt động";
@@ -129,7 +128,7 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
                     lbErr.Text = "";
                     int fromAirport = (int)cbFrom.SelectedValue;
                     int toAirport = (int)cbTo.SelectedValue;
-                    flight = new Flight(0, cbFromDe.Text, cbToDe.Text, new DAO_Airport().getById(fromAirport), new DAO_Airport().getById(toAirport), dtpTime.Value, dtpTime.Value, dtpTime.Value, Int32.Parse(txtTotalTicket.Text), Int32.Parse(txtTotalTicket.Text), 0, new DAO_Airplane().getById(plane_id), "Hoạt động");
+                    flight = new Flight(0, cbFromDe.Text, cbToDe.Text, new DAO_Airport().getById(fromAirport), new DAO_Airport().getById(toAirport), dtpTime.Value, dtpTime.Value, dtpTime.Value, 0, Int32.Parse(txtTotalTicket.Text), 0, new DAO_Airplane().getById(plane_id), "Hoạt động");
                     try
                     {
                         new DAO_Flight().add(flight);
@@ -191,7 +190,6 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
                     flight.DestinationAirport = new DAO_Airport().getById(toAirport);
                     flight.DepartureTime = dtpTime.Value;
                     flight.ArrivalTime = dtpTime.Value;
-                    flight.TotalTickets = totalTicket;
                     flight.Airplane = new DAO_Airplane().getById(plane_id);
                     try
                     {
@@ -221,7 +219,6 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
             cbFrom.Enabled = true;
             cbTo.Enabled = true;
             dtpTime.Enabled = true;
-            txtTotalTicket.Enabled = true;
             cbAirline.Enabled = true;
             cbAirplane.Enabled = true;
         }
@@ -285,6 +282,15 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
                 btnEdit.BringToFront();
                 btnEdit.Enabled = false;
             }
+            if (flight.RemainingTickets <= 0)
+            {
+                btnBooking.Enabled = false;
+            }
+        }
+
+        private void btnBooking_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tính năng sẽ được phát triển trong tương lai!", "Bảo trì chức năng");
         }
     }
 }
