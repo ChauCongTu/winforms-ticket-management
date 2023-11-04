@@ -21,6 +21,8 @@ namespace Sunny.UI.Demo.Views
             myProfile = new DAO.DAO_User().getById(1);
             nmAside.Nodes.Add("QLKH", "Thông tin Khách hàng");
             nmAside.Nodes[8].Tag = "QLKH";
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(new ucStatistical());
         }
 
         public MainFrame(User loginUser)
@@ -29,6 +31,8 @@ namespace Sunny.UI.Demo.Views
             myProfile = loginUser;
             nmAside.Nodes.Add("QLKH", "Quản lý khách hàng");
             nmAside.Nodes[8].Tag = "QLKH";
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(new ucStatistical());
         }
 
         private void nmAside_MenuItemClick(TreeNode node, NavMenuItem item, int pageIndex)
