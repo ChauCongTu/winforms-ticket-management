@@ -30,7 +30,12 @@ namespace Sunny.UI.Demo
             string title = "Có lỗi xảy ra";
             MessageBox.Show(message, title);
         }
-
+        public static string FormatVND(string chuoiSo)
+        {
+            double so = double.Parse(chuoiSo, CultureInfo.InvariantCulture);
+            string ketQua = so.ToString("N0", CultureInfo.CreateSpecificCulture("vi-VN"));
+            return ketQua;
+        }
         public static string GenerateBookingCode()
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

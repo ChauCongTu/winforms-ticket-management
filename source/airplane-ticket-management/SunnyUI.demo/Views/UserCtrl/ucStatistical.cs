@@ -25,7 +25,11 @@ namespace Sunny.UI.Demo.Views.UserCtrl
         {
             
             string selectedValue = cb_Chucnang.SelectedItem.ToString();
-            if (selectedValue == "Thống kê khách hàng")
+            if (selectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn chức năng thống kê", "Lỗi");
+            }
+            else if (selectedValue == "Thống kê khách hàng")
             {
                 NForm.Statistics.Statistical_Customer SCForm = new NForm.Statistics.Statistical_Customer();
                 SCForm.ShowDialog();
@@ -45,10 +49,6 @@ namespace Sunny.UI.Demo.Views.UserCtrl
                 NForm.Statistics.Statistical_Profit SPForm = new NForm.Statistics.Statistical_Profit();
                 SPForm.ShowDialog();
             }
-
-            
-
-
         }
 
         private void btn_Load_Click(object sender, EventArgs e)
@@ -83,7 +83,15 @@ namespace Sunny.UI.Demo.Views.UserCtrl
             lbl_Chuyenbay.Text = flightCount.ToString();
 
             int revenueCount = daoStatistical.getRevenue_Count();
-            lbl_Doanhthu.Text = revenueCount.ToString();
+            lbl_Doanhthu.Text = Helper.FormatVND(revenueCount.ToString());
+
+            int transactionCount = daoStatistical.getTicket_Count();
+            lbTicket.Text = transactionCount.ToString();
+        }
+
+        private void uiPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

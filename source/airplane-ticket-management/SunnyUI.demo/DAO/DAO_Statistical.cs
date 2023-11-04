@@ -43,6 +43,32 @@ namespace Sunny.UI.Demo.DAO
             return userCount;
         }
 
+        public int getTicket_Count()
+        {
+            DateTime a = DateTime.Now;
+            int month = a.Month;
+            int userCount = 0;
+            using (SqlConnection _conn = new SqlConnection(_strConn))
+            {
+                _conn.Open();
+
+                try
+                {
+                    using (SqlCommand command = new SqlCommand($"SELECT count(*) as ticket_count FROM transactions WHERE MONTH(booking_date) = {month}", _conn))
+                    {
+                        userCount = (int)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception e)
+                {
+                    new Helper().dbError();
+                    return userCount;
+                }
+            }
+
+            return userCount;
+        }
+
         public int getCustomer_Count()
         {
             int customerCount = 0;
@@ -91,6 +117,8 @@ namespace Sunny.UI.Demo.DAO
 
         public int getRevenue_Count()
         {
+            DateTime a = DateTime.Now;
+            int month = a.Month;
             int revenueCount = 0;
             using (SqlConnection _conn = new SqlConnection(_strConn))
             {
@@ -98,7 +126,7 @@ namespace Sunny.UI.Demo.DAO
 
                 try
                 {
-                    using (SqlCommand command = new SqlCommand("SELECT SUM(price_vnd) as revenue_count FROM tickets", _conn))
+                    using (SqlCommand command = new SqlCommand($"SELECT SUM(t.price_vnd) as revenue_count FROM transactions s JOIN tickets t ON s.ticket_id = t.ticket_id WHERE MONTH(s.booking_date) = {month}", _conn))
                     {
                         revenueCount = (int)command.ExecuteScalar();
                     }

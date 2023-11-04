@@ -31,13 +31,17 @@
             this.uiMarkLabel1 = new Sunny.UI.UIMarkLabel();
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Load = new Sunny.UI.UIButton();
             this.uiPanel3 = new Sunny.UI.UIPanel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lbTicket = new Sunny.UI.UILabel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.uiLabel5 = new Sunny.UI.UILabel();
             this.lbl_Chuyenbay = new Sunny.UI.UILabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.uiLabel4 = new Sunny.UI.UILabel();
             this.lbl_Doanhthu = new Sunny.UI.UILabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.lbl_Khachhang = new Sunny.UI.UILabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.uiLabel3 = new Sunny.UI.UILabel();
@@ -45,19 +49,15 @@
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.cb_Chucnang = new Sunny.UI.UIComboBox();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiPanel1.SuspendLayout();
             this.uiPanel3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.uiGroupBox1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiMarkLabel1
@@ -78,7 +78,6 @@
             // uiPanel1
             // 
             this.uiPanel1.Controls.Add(this.label1);
-            this.uiPanel1.Controls.Add(this.btn_Load);
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.uiPanel1.Location = new System.Drawing.Point(0, 98);
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -89,60 +88,18 @@
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiPanel1.Click += new System.EventHandler(this.uiPanel1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(596, 13);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(461, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 27);
+            this.label1.Size = new System.Drawing.Size(250, 25);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Load data: ";
-            // 
-            // btn_Load
-            // 
-            // uiDatetimePicker1
-            // 
-            this.uiDatetimePicker1.FillColor = System.Drawing.Color.White;
-            this.uiDatetimePicker1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiDatetimePicker1.Location = new System.Drawing.Point(174, 10);
-            this.uiDatetimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiDatetimePicker1.MaxLength = 19;
-            this.uiDatetimePicker1.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiDatetimePicker1.Name = "uiDatetimePicker1";
-            this.uiDatetimePicker1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiDatetimePicker1.Size = new System.Drawing.Size(200, 29);
-            this.uiDatetimePicker1.SymbolDropDown = 61555;
-            this.uiDatetimePicker1.SymbolNormal = 61555;
-            this.uiDatetimePicker1.TabIndex = 0;
-            this.uiDatetimePicker1.Text = "2023-10-29 15:45:48";
-            this.uiDatetimePicker1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiDatetimePicker1.Value = new System.DateTime(2023, 10, 29, 15, 45, 48, 32);
-            this.uiDatetimePicker1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiPanel2
-            // 
-            this.uiPanel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.uiPanel2.Location = new System.Drawing.Point(579, 98);
-            this.uiPanel2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel2.Name = "uiPanel2";
-            this.uiPanel2.Radius = 4;
-            this.uiPanel2.Size = new System.Drawing.Size(8, 62);
-            this.uiPanel2.TabIndex = 18;
-            this.uiPanel2.Text = null;
-            this.uiPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiPanel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.btn_Load.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Load.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.btn_Load.Location = new System.Drawing.Point(749, 11);
-            this.btn_Load.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btn_Load.Name = "btn_Load";
-            this.btn_Load.Size = new System.Drawing.Size(95, 29);
-            this.btn_Load.TabIndex = 4;
-            this.btn_Load.Text = "Load";
-            this.btn_Load.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.btn_Load.Click += new System.EventHandler(this.btn_Load_Click);
+            this.label1.Text = "THÔNG SỐ BÁO CÁO";
             // 
             // uiPanel3
             // 
@@ -164,6 +121,30 @@
             this.uiPanel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.uiLabel6);
+            this.groupBox5.Controls.Add(this.lbTicket);
+            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(935, 10);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(221, 257);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Bán Vé Trong Tháng";
+            // 
+            // lbTicket
+            // 
+            this.lbTicket.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTicket.Location = new System.Drawing.Point(6, 60);
+            this.lbTicket.Name = "lbTicket";
+            this.lbTicket.Size = new System.Drawing.Size(209, 65);
+            this.lbTicket.Style = Sunny.UI.UIStyle.Custom;
+            this.lbTicket.TabIndex = 3;
+            this.lbTicket.Text = "0";
+            this.lbTicket.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTicket.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.uiLabel5);
@@ -175,6 +156,18 @@
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chuyến Bay";
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel5.Location = new System.Drawing.Point(6, 126);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(209, 90);
+            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel5.TabIndex = 4;
+            this.uiLabel5.Text = "Chuyến";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // lbl_Chuyenbay
             // 
@@ -198,11 +191,23 @@
             this.groupBox3.Size = new System.Drawing.Size(221, 257);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Doanh Thu";
+            this.groupBox3.Text = "Doanh Thu Tháng Này";
+            // 
+            // uiLabel4
+            // 
+            this.uiLabel4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel4.Location = new System.Drawing.Point(6, 126);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(209, 90);
+            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel4.TabIndex = 3;
+            this.uiLabel4.Text = "VNĐ";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // lbl_Doanhthu
             // 
-            this.lbl_Doanhthu.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Doanhthu.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Doanhthu.Location = new System.Drawing.Point(6, 60);
             this.lbl_Doanhthu.Name = "lbl_Doanhthu";
             this.lbl_Doanhthu.Size = new System.Drawing.Size(209, 65);
@@ -223,6 +228,18 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Khách Hàng";
+            // 
+            // uiLabel1
+            // 
+            this.uiLabel1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel1.Location = new System.Drawing.Point(6, 126);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(209, 90);
+            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel1.TabIndex = 2;
+            this.uiLabel1.Text = "Khách hàng";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // lbl_Khachhang
             // 
@@ -323,64 +340,17 @@
             this.cb_Chucnang.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cb_Chucnang.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // uiLabel1
+            // uiLabel6
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel1.Location = new System.Drawing.Point(6, 126);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(209, 90);
-            this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel1.TabIndex = 2;
-            this.uiLabel1.Text = "Khách hàng";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.uiLabel2);
-            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(935, 10);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(221, 257);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Chuyến bay";
-            // 
-            // uiLabel2
-            // 
-            this.uiLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel2.Location = new System.Drawing.Point(6, 60);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(209, 65);
-            this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel2.TabIndex = 3;
-            this.uiLabel2.Text = "0";
-            this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel4
-            // 
-            this.uiLabel4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel4.Location = new System.Drawing.Point(6, 126);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(209, 90);
-            this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel4.TabIndex = 3;
-            this.uiLabel4.Text = "VNĐ";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel5
-            // 
-            this.uiLabel5.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.Location = new System.Drawing.Point(6, 126);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(209, 90);
-            this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel5.TabIndex = 4;
-            this.uiLabel5.Text = "Chuyến";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.uiLabel6.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel6.Location = new System.Drawing.Point(6, 126);
+            this.uiLabel6.Name = "uiLabel6";
+            this.uiLabel6.Size = new System.Drawing.Size(209, 90);
+            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel6.TabIndex = 5;
+            this.uiLabel6.Text = "Vé";
+            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // ucStatistical
             // 
@@ -391,19 +361,19 @@
             this.Controls.Add(this.uiPanel3);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiMarkLabel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucStatistical";
             this.Size = new System.Drawing.Size(1165, 639);
             this.Load += new System.EventHandler(this.ucStatistical_Load);
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel1.PerformLayout();
             this.uiPanel3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.uiGroupBox1.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -425,12 +395,12 @@
         private UIGroupBox uiGroupBox1;
         private UIComboBox cb_Chucnang;
         private UIButton uiButton1;
-        private UIButton btn_Load;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private UILabel uiLabel2;
+        private UILabel lbTicket;
         private UILabel uiLabel1;
         private UILabel uiLabel5;
         private UILabel uiLabel4;
+        private UILabel uiLabel6;
     }
 }
