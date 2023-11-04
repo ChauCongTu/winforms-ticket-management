@@ -282,3 +282,10 @@ VALUES
     (2, 1),
     (3, 2),
     (1, 3);
+
+INSERT INTO transactions (booking_code, ticket_id, customer_id, note, booking_date, performed_by)
+VALUES
+	(123, 1, 1, N'hahahaha', NULL, NULL),
+	(562, 2, 1, N'hahahaha1', NULL, NULL),
+	(348, 2, 2, N'hahaha3', NULL, NULL),
+	(966, 3, 2, N'hahahaha2', NULL, NULL);

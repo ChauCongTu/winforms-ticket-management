@@ -1,4 +1,6 @@
-﻿using Sunny.UI.Demo.Views.NForm.Statistics;
+﻿using Sunny.UI.Demo.DAO;
+using Sunny.UI.Demo.Model;
+using Sunny.UI.Demo.Views.NForm.Statistics;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +23,7 @@ namespace Sunny.UI.Demo.Views.UserCtrl
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
+            
             string selectedValue = cb_Chucnang.SelectedItem.ToString();
             if (selectedValue == "Thống kê khách hàng")
             {
@@ -42,6 +45,45 @@ namespace Sunny.UI.Demo.Views.UserCtrl
                 NForm.Statistics.Statistical_Profit SPForm = new NForm.Statistics.Statistical_Profit();
                 SPForm.ShowDialog();
             }
+
+            
+
+
+        }
+
+        private void btn_Load_Click(object sender, EventArgs e)
+        {
+            DAO_Statistical daoStatistical = new DAO_Statistical();
+
+            int userCount = daoStatistical.getUser_Count();
+            lbl_Nhanvien.Text = userCount.ToString();
+
+            int customerCount = daoStatistical.getCustomer_Count();
+            lbl_Khachhang.Text = customerCount.ToString();
+
+            int flightCount = daoStatistical.getFlight_Count();
+            lbl_Chuyenbay.Text = flightCount.ToString();
+
+            int revenueCount = daoStatistical.getRevenue_Count();
+            lbl_Doanhthu.Text = revenueCount.ToString();
+
+        }
+
+        private void ucStatistical_Load(object sender, EventArgs e)
+        {
+            DAO_Statistical daoStatistical = new DAO_Statistical();
+
+            int userCount = daoStatistical.getUser_Count();
+            lbl_Nhanvien.Text = userCount.ToString();
+
+            int customerCount = daoStatistical.getCustomer_Count();
+            lbl_Khachhang.Text = customerCount.ToString();
+
+            int flightCount = daoStatistical.getFlight_Count();
+            lbl_Chuyenbay.Text = flightCount.ToString();
+
+            int revenueCount = daoStatistical.getRevenue_Count();
+            lbl_Doanhthu.Text = revenueCount.ToString();
         }
     }
 }
