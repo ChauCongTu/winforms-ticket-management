@@ -427,6 +427,60 @@
     <Compile Include="Views\NForm\Airlines\edit.Designer.cs">
       <DependentUpon>edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Bookings\Transactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Bookings\Transactions.Designer.cs">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Customers\DetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Customers\DetailForm.Designer.cs">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Airplanes\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airplanes\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Airplanes\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airplanes\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Airport\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airport\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Airport\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Airport\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\detail.Designer.cs">
+      <DependentUpon>detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Employees\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NForm\Flights\ShowDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -463,6 +517,30 @@
     <Compile Include="Views\UserCtrl\ucStatistical.Designer.cs">
       <DependentUpon>ucStatistical.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NForm\Flights\Transits\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Flights\Transits\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Flights\Transits\TransitFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Flights\Transits\TransitFrame.Designer.cs">
+      <DependentUpon>TransitFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Tickets\add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Tickets\add.Designer.cs">
+      <DependentUpon>add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NForm\Tickets\edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\NForm\Tickets\edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserCtrl\ucBooking.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -498,6 +576,24 @@
     </Compile>
     <Compile Include="Views\UserCtrl\ucQuanLyHang.Designer.cs">
       <DependentUpon>ucQuanLyHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucQuanlymaybay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucQuanlymaybay.Designer.cs">
+      <DependentUpon>ucQuanlymaybay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucQuanLySanBay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucQuanLySanBay.Designer.cs">
+      <DependentUpon>ucQuanLySanBay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucTicket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserCtrl\ucTicket.Designer.cs">
+      <DependentUpon>ucTicket.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Charts\FDoughnutChart.resx">
       <DependentUpon>FDoughnutChart.cs</DependentUpon>
@@ -677,6 +773,33 @@
     <EmbeddedResource Include="Views\NForm\Airlines\edit.resx">
       <DependentUpon>edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Bookings\Transactions.resx">
+      <DependentUpon>Transactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Customers\DetailForm.resx">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airplanes\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airplanes\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airport\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Airport\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Employees\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Employees\detail.resx">
+      <DependentUpon>detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Employees\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\NForm\Flights\ShowDetail.resx">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -695,6 +818,18 @@
     <EmbeddedResource Include="Views\UserCtrl\ucStatistical.resx">
       <DependentUpon>ucStatistical.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Flights\Transits\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Flights\Transits\TransitFrame.resx">
+      <DependentUpon>TransitFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Tickets\add.resx">
+      <DependentUpon>add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NForm\Tickets\edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucBooking.resx">
       <DependentUpon>ucBooking.cs</DependentUpon>
     </EmbeddedResource>
@@ -712,6 +847,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserCtrl\ucQuanLyHang.resx">
       <DependentUpon>ucQuanLyHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucQuanlymaybay.resx">
+      <DependentUpon>ucQuanlymaybay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucQuanLySanBay.resx">
+      <DependentUpon>ucQuanLySanBay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCtrl\ucTicket.resx">
+      <DependentUpon>ucTicket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -910,6 +1054,18 @@
     <None Include="Resources\searchicon.png" />
     <None Include="Resources\eye.png" />
     <None Include="Resources\plane-mixivivu-removebg-preview.png" />
+    <None Include="Resources\order_ticket.png" />
+    <None Include="Resources\flight-ticket-5370540-4492077.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\Screenshot 2023-11-01 173330.png" />
+    <None Include="Resources\Screenshot_2023-11-01_173330-removebg-preview.png" />
+    <None Include="Resources\view-details-4 %281%291.png" />
+    <None Include="Resources\name-2-removebg-preview.png" />
+    <None Include="Resources\phone-removebg-preview.png" />
+    <None Include="Resources\mail.png" />
+    <None Include="Resources\name.png" />
+    <None Include="Resources\gender.png" />
+    <None Include="Resources\dob.png" />
     <Content Include="SunnyUI.ico" />
   </ItemGroup>
   <ItemGroup />

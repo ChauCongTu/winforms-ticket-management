@@ -101,6 +101,38 @@
             // 
             // btn_Load
             // 
+            // uiDatetimePicker1
+            // 
+            this.uiDatetimePicker1.FillColor = System.Drawing.Color.White;
+            this.uiDatetimePicker1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiDatetimePicker1.Location = new System.Drawing.Point(174, 10);
+            this.uiDatetimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiDatetimePicker1.MaxLength = 19;
+            this.uiDatetimePicker1.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiDatetimePicker1.Name = "uiDatetimePicker1";
+            this.uiDatetimePicker1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiDatetimePicker1.Size = new System.Drawing.Size(200, 29);
+            this.uiDatetimePicker1.SymbolDropDown = 61555;
+            this.uiDatetimePicker1.SymbolNormal = 61555;
+            this.uiDatetimePicker1.TabIndex = 0;
+            this.uiDatetimePicker1.Text = "2023-10-29 15:45:48";
+            this.uiDatetimePicker1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiDatetimePicker1.Value = new System.DateTime(2023, 10, 29, 15, 45, 48, 32);
+            this.uiDatetimePicker1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uiPanel2
+            // 
+            this.uiPanel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiPanel2.Location = new System.Drawing.Point(579, 98);
+            this.uiPanel2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel2.Name = "uiPanel2";
+            this.uiPanel2.Radius = 4;
+            this.uiPanel2.Size = new System.Drawing.Size(8, 62);
+            this.uiPanel2.TabIndex = 18;
+            this.uiPanel2.Text = null;
+            this.uiPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiPanel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.btn_Load.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Load.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
             this.btn_Load.Location = new System.Drawing.Point(749, 11);

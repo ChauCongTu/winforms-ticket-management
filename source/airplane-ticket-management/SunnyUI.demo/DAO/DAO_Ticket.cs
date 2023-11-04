@@ -25,7 +25,7 @@ namespace Sunny.UI.Demo.DAO
 
             try
             {
-                command = new SqlCommand($"SELECT t.*, c.class_type FROM tickets t JOIN ticket_classes c ON t.ticket_class = c.class_id", _conn);
+                command = new SqlCommand($"SELECT t.*, c.class_type FROM tickets t JOIN ticket_classes c ON t.ticket_class = c.class_id ORDER BY ticket_class", _conn);
                 reader = command.ExecuteReader();
             }
             catch (Exception e)
@@ -40,7 +40,150 @@ namespace Sunny.UI.Demo.DAO
                 int flightId = reader.GetInt32(1);
                 int classId = reader.GetInt32(2);
                 int priceVnd = reader.GetInt32(3);
-                float priceUsd = reader.GetFloat(4);
+                float priceUsd = (float)reader.GetDouble(4);
+                string seatNumber = reader.GetString(5);
+                string ticketClass = reader.GetString(6);
+
+                Ticket ticket = new Ticket(ticketId, flightId, priceVnd, priceUsd, seatNumber, ticketClass, classId);
+                ticketList.Add(ticket);
+            }
+
+            _conn.Close();
+            return ticketList;
+        }
+
+        public List<Ticket> getByFlightClass(int inputClassId, int inputFlightId)
+        {
+            List<Ticket> ticketList = new List<Ticket>();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT t.*, c.class_type FROM tickets t JOIN ticket_classes c ON t.ticket_class = c.class_id LEFT JOIN transactions s ON t.ticket_id = s.ticket_id WHERE flight_id = {inputFlightId} AND ticket_class = {inputClassId} AND s.ticket_id IS NULL", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return ticketList;
+            }
+
+            while (reader.Read())
+            {
+                int ticketId = reader.GetInt32(0);
+                int flightId = reader.GetInt32(1);
+                int classId = reader.GetInt32(2);
+                int priceVnd = reader.GetInt32(3);
+                float priceUsd = (float)reader.GetDouble(4);
+                string seatNumber = reader.GetString(5);
+                string ticketClass = reader.GetString(6);
+
+                Ticket ticket = new Ticket(ticketId, flightId, priceVnd, priceUsd, seatNumber, ticketClass, classId);
+                ticketList.Add(ticket);
+            }
+
+            _conn.Close();
+            return ticketList;
+        }
+
+        public List<Ticket> getTicketOfFlight(int flight_id)
+        {
+            List<Ticket> ticketList = new List<Ticket>();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT t.*, c.class_type FROM tickets t JOIN ticket_classes c ON t.ticket_class = c.class_id WHERE flight_id = {flight_id} ORDER BY ticket_class", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return ticketList;
+            }
+
+            while (reader.Read())
+            {
+                int ticketId = reader.GetInt32(0);
+                int flightId = reader.GetInt32(1);
+                int classId = reader.GetInt32(2);
+                int priceVnd = reader.GetInt32(3);
+                float priceUsd = (float)reader.GetDouble(4);
+                string seatNumber = reader.GetString(5);
+                string ticketClass = reader.GetString(6);
+
+                Ticket ticket = new Ticket(ticketId, flightId, priceVnd, priceUsd, seatNumber, ticketClass, classId);
+                ticketList.Add(ticket);
+            }
+
+            _conn.Close();
+            return ticketList;
+        }
+
+        public List<Ticket> getByClass(int flight_id, int ticket_class)
+        {
+            List<Ticket> ticketList = new List<Ticket>();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT t.*, c.class_type FROM tickets t JOIN ticket_classes c ON t.ticket_class = c.class_id WHERE flight_id = {flight_id} AND ticket_class = {ticket_class}", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return ticketList;
+            }
+
+            while (reader.Read())
+            {
+                int ticketId = reader.GetInt32(0);
+                int flightId = reader.GetInt32(1);
+                int classId = reader.GetInt32(2);
+                int priceVnd = reader.GetInt32(3);
+                float priceUsd = (float)reader.GetDouble(4);
+                string seatNumber = reader.GetString(5);
+                string ticketClass = reader.GetString(6);
+
+                Ticket ticket = new Ticket(ticketId, flightId, priceVnd, priceUsd, seatNumber, ticketClass, classId);
+                ticketList.Add(ticket);
+            }
+
+            _conn.Close();
+            return ticketList;
+        }
+
+        public List<Ticket> getByStatus(int flight_id, int isSold)
+        {
+            List<Ticket> ticketList = new List<Ticket>();
+            _conn.Open();
+
+            try
+            {
+                if (isSold == 1)
+                {
+                    command = new SqlCommand($"SELECT t.*, c.class_type FROM tickets t JOIN ticket_classes c ON t.ticket_class = c.class_id JOIN transactions s ON t.ticket_id = s.ticket_id WHERE flight_id = {flight_id} ORDER BY ticket_class", _conn);
+                }
+                else
+                {
+                    command = new SqlCommand($"SELECT t.*, c.class_type FROM tickets t JOIN ticket_classes c ON t.ticket_class = c.class_id LEFT JOIN transactions s ON t.ticket_id = s.ticket_id WHERE flight_id = {flight_id} AND s.ticket_id IS NULL ORDER BY ticket_class", _conn);
+                }
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return ticketList;
+            }
+
+            while (reader.Read())
+            {
+                int ticketId = reader.GetInt32(0);
+                int flightId = reader.GetInt32(1);
+                int classId = reader.GetInt32(2);
+                int priceVnd = reader.GetInt32(3);
+                float priceUsd = (float)reader.GetDouble(4);
                 string seatNumber = reader.GetString(5);
                 string ticketClass = reader.GetString(6);
 
@@ -74,7 +217,7 @@ namespace Sunny.UI.Demo.DAO
                 int flightId = reader.GetInt32(1);
                 int classId = reader.GetInt32(2);
                 int priceVnd = reader.GetInt32(3);
-                float priceUsd = reader.GetFloat(4);
+                float priceUsd = (float)reader.GetDouble(4);
                 string seatNumber = reader.GetString(5);
                 string ticketClass = reader.GetString(6);
 
@@ -113,6 +256,115 @@ namespace Sunny.UI.Demo.DAO
             command = new SqlCommand($"DELETE FROM tickets WHERE ticket_id = {id}", _conn);
             command.ExecuteNonQuery();
             _conn.Close();
+        }
+
+        public bool isSold(int ticketId)
+        {
+            int hasRow = 0;
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"select count(tk.flight_id) as num from tickets tk join transactions ts on tk.ticket_id = ts.ticket_id where tk.ticket_id = {ticketId}", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return false;
+            }
+
+            while (reader.Read())
+            {
+                hasRow = reader.GetInt32(0);
+            }
+            _conn.Close();
+            if (hasRow != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public int getTotalTicket(int flightid)
+        {
+            int hasRow = 0;
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"SELECT count(ticket_id) as numb FROM tickets WHERE flight_id = {flightid}", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return 0;
+            }
+
+            while (reader.Read())
+            {
+                hasRow = reader.GetInt32(0);
+            }
+            _conn.Close();
+            return hasRow;
+        }
+
+        public int getRemainTicket(int flightid)
+        {
+            int hasRow = 0;
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"SELECT count(*) FROM tickets t LEFT JOIN transactions s ON t.ticket_id = s.ticket_id WHERE flight_id = {flightid} AND transaction_id is null", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return 0;
+            }
+
+            while (reader.Read())
+            {
+                hasRow = reader.GetInt32(0);
+            }
+            _conn.Close();
+            return hasRow;
+        }
+
+        public bool checkLower9(string id_number, int Flight_id)
+        {
+            int customer_id = new DAO_Customer().getByCustomerID(id_number).CustomerId;
+            int hasRow = 0;
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"SELECT count(s.customer_id) as num " +
+                    $"FROM tickets t JOIN transactions s ON t.ticket_id = s.ticket_id JOIN flights f ON t.flight_id = f.flight_id " +
+                    $"WHERE s.customer_id = {customer_id} AND f.flight_id = {Flight_id}", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError(e.Message);
+                return false;
+            }
+
+            while (reader.Read())
+            {
+                hasRow = reader.GetInt32(0);
+            }
+            _conn.Close();
+            if (hasRow <= 9)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -64,6 +64,98 @@ namespace Sunny.UI.Demo.DAO
             return transactionList;
         }
 
+        public List<Transaction> getByFlight(int flight_id)
+        {
+            List<Transaction> transactionList = new List<Transaction>();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT s.* FROM transactions s JOIN tickets t ON s.ticket_id = t.ticket_id WHERE t.flight_id = {flight_id}", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return transactionList;
+            }
+
+            while (reader.Read())
+            {
+                int transactionId = reader.GetInt32(0);
+                string bookingCode = reader.GetString(1);
+                int ticketId = reader.GetInt32(2);
+                int customerId = reader.GetInt32(3);
+                string note = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                DateTime? bookingDate = null;
+                if (!reader.IsDBNull(5))
+                {
+                    bookingDate = reader.GetDateTime(5);
+                }
+                int performedById = reader.GetInt32(6);
+
+                // Lấy thông tin khách hàng
+                DAO_Customer daoCustomer = new DAO_Customer();
+                Customer customer = daoCustomer.getById(customerId);
+
+                // Lấy thông tin người thực hiện
+                DAO_User daoUser = new DAO_User();
+                User performedBy = daoUser.getById(performedById);
+
+                Transaction transaction = new Transaction(transactionId, bookingCode, ticketId, customer, note, bookingDate, performedBy);
+                transactionList.Add(transaction);
+            }
+
+            _conn.Close();
+            return transactionList;
+        }
+
+        public List<Transaction> getByBookingCode(string booking_code)
+        {
+            List<Transaction> transactionList = new List<Transaction>();
+            _conn.Open();
+
+            try
+            {
+                command = new SqlCommand($"SELECT s.* FROM transactions s JOIN tickets t ON s.ticket_id = t.ticket_id WHERE s.booking_code = '{booking_code}'", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return transactionList;
+            }
+
+            while (reader.Read())
+            {
+                int transactionId = reader.GetInt32(0);
+                string bookingCode = reader.GetString(1);
+                int ticketId = reader.GetInt32(2);
+                int customerId = reader.GetInt32(3);
+                string note = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                DateTime? bookingDate = null;
+                if (!reader.IsDBNull(5))
+                {
+                    bookingDate = reader.GetDateTime(5);
+                }
+                int performedById = reader.GetInt32(6);
+
+                // Lấy thông tin khách hàng
+                DAO_Customer daoCustomer = new DAO_Customer();
+                Customer customer = daoCustomer.getById(customerId);
+
+                // Lấy thông tin người thực hiện
+                DAO_User daoUser = new DAO_User();
+                User performedBy = daoUser.getById(performedById);
+
+                Transaction transaction = new Transaction(transactionId, bookingCode, ticketId, customer, note, bookingDate, performedBy);
+                transactionList.Add(transaction);
+            }
+
+            _conn.Close();
+            return transactionList;
+        }
+
         public Transaction getById(int id)
         {
             Transaction transaction = new Transaction();
@@ -112,10 +204,9 @@ namespace Sunny.UI.Demo.DAO
         public void add(Transaction transaction)
         {
             _conn.Open();
-            string bookingDateStr = transaction.BookingDate != null ? $"'{transaction.BookingDate.Value.ToString("yyyy-MM-dd HH:mm:ss")}'" : "NULL";
-            command = new SqlCommand($"INSERT INTO transactions (booking_code, ticket_id, customer_id, note, booking_date, performed_by) " +
+            command = new SqlCommand($"INSERT INTO transactions (booking_code, ticket_id, customer_id, note, performed_by) " +
                 $"VALUES (N'{transaction.BookingCode}', {transaction.TicketId}, {transaction.Customer.CustomerId}, " +
-                $"N'{transaction.Note}', {bookingDateStr}, {transaction.Performed.UserId})", _conn);
+                $"N'{transaction.Note}', {transaction.Performed.UserId})", _conn);
             command.ExecuteNonQuery();
             _conn.Close();
         }
@@ -129,7 +220,6 @@ namespace Sunny.UI.Demo.DAO
                 $"ticket_id = {transaction.TicketId}, " +
                 $"customer_id = {transaction.Customer.CustomerId}, " +
                 $"note = N'{transaction.Note}', " +
-                $"booking_date = {bookingDateStr}, " +
                 $"performed_by = {transaction.Performed.UserId} " +
                 $"WHERE transaction_id = {transaction.TransactionId}", _conn);
             command.ExecuteNonQuery();

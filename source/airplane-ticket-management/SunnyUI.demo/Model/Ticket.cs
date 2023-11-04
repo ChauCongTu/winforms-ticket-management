@@ -30,4 +30,17 @@ namespace Sunny.UI.Demo.Model
         {
         }
     }
+    public class TicketShow
+    {
+        public int TicketId { get; set; }
+        public string TicketDisplay { get; set; }
+
+        public TicketShow() { }
+
+        public TicketShow(Ticket ticket)
+        {
+            this.TicketId = ticket.TicketId;
+            this.TicketDisplay = ticket.ticketClass + " Ticket #" + ticket.TicketId + " - " + Helper.FormatVietnameseCurrency(ticket.PriceVnd.ToString()) ;
+        }
+    }
 }
