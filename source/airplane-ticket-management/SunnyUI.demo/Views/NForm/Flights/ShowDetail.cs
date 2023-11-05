@@ -277,14 +277,17 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
 
         private void ShowDetail_Load(object sender, EventArgs e)
         {
-            if (flight.DepartureTime.Value < DateTime.Now)
+            if (flight.Destination != null)
             {
-                btnEdit.BringToFront();
-                btnEdit.Enabled = false;
-            }
-            if (flight.RemainingTickets <= 0)
-            {
-                btnBooking.Enabled = false;
+                if (flight.DepartureTime.Value < DateTime.Now)
+                {
+                    btnEdit.BringToFront();
+                    btnEdit.Enabled = false;
+                }
+                if (flight.RemainingTickets <= 0)
+                {
+                    btnBooking.Enabled = false;
+                }
             }
         }
 
