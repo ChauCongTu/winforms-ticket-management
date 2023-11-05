@@ -150,6 +150,10 @@ namespace Sunny.UI.Demo.Views.NForm.Statistics
 
         }
 
-       
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Hide();
+        }
     }
 }

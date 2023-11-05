@@ -24,30 +24,24 @@ namespace Sunny.UI.Demo.Views.UserCtrl
         private void uiButton1_Click(object sender, EventArgs e)
         {
             
-            string selectedValue = cb_Chucnang.SelectedItem.ToString();
-            if (selectedValue == null)
+            
+            if (cb_Chucnang.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng chọn chức năng thống kê", "Lỗi");
             }
-            else if (selectedValue == "Thống kê khách hàng")
+            else
             {
-                NForm.Statistics.Statistical_Customer SCForm = new NForm.Statistics.Statistical_Customer();
-                SCForm.ShowDialog();
-            }
-            else if (selectedValue == "Thống kê chuyến bay")
-            {
-                NForm.Statistics.Statistical_Flight SFForm = new NForm.Statistics.Statistical_Flight();
-                SFForm.ShowDialog();
-            }
-            else if (selectedValue == "Thống kê doanh số bán vé")
-            {
-                NForm.Statistics.Statistical_Ticket_Sales STSForm = new NForm.Statistics.Statistical_Ticket_Sales();
-                STSForm.ShowDialog();
-            }
-            else if (selectedValue == "Thống kê lợi nhuận")
-            {
-                NForm.Statistics.Statistical_Profit SPForm = new NForm.Statistics.Statistical_Profit();
-                SPForm.ShowDialog();
+                string selectedValue = cb_Chucnang.SelectedItem.ToString();
+                if (selectedValue == "Thống kê doanh số bán vé")
+                {
+                    NForm.Statistics.Statistical_Ticket_Sales STSForm = new NForm.Statistics.Statistical_Ticket_Sales();
+                    STSForm.ShowDialog();
+                }
+                else if (selectedValue == "Thống kê doanh thu")
+                {
+                    NForm.Statistics.Statistical_Profit SPForm = new NForm.Statistics.Statistical_Profit();
+                    SPForm.ShowDialog();
+                }
             }
         }
 

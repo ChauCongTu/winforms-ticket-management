@@ -228,5 +228,11 @@ namespace Sunny.UI.Demo.Views.NForm.Statistics
                 lbl_FirstClass.Text = firstClassCount.ToString() + " vé";
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Hide();
+        }
     }
 }

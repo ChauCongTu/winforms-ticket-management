@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.uiPanel3 = new Sunny.UI.UIPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.uiLabel6 = new Sunny.UI.UILabel();
             this.lbTicket = new Sunny.UI.UILabel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.uiLabel5 = new Sunny.UI.UILabel();
@@ -49,7 +50,6 @@
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.cb_Chucnang = new Sunny.UI.UIComboBox();
-            this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiPanel1.SuspendLayout();
             this.uiPanel3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -123,9 +123,11 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
             this.groupBox5.Controls.Add(this.uiLabel6);
             this.groupBox5.Controls.Add(this.lbTicket);
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(935, 10);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(221, 257);
@@ -133,9 +135,23 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Bán Vé Trong Tháng";
             // 
+            // uiLabel6
+            // 
+            this.uiLabel6.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel6.ForeColor = System.Drawing.Color.White;
+            this.uiLabel6.Location = new System.Drawing.Point(6, 126);
+            this.uiLabel6.Name = "uiLabel6";
+            this.uiLabel6.Size = new System.Drawing.Size(209, 90);
+            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
+            this.uiLabel6.TabIndex = 5;
+            this.uiLabel6.Text = "Vé";
+            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // lbTicket
             // 
             this.lbTicket.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTicket.ForeColor = System.Drawing.Color.White;
             this.lbTicket.Location = new System.Drawing.Point(6, 60);
             this.lbTicket.Name = "lbTicket";
             this.lbTicket.Size = new System.Drawing.Size(209, 65);
@@ -147,9 +163,11 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(84)))), ((int)(((byte)(0)))));
             this.groupBox4.Controls.Add(this.uiLabel5);
             this.groupBox4.Controls.Add(this.lbl_Chuyenbay);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(706, 10);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(221, 257);
@@ -160,6 +178,7 @@
             // uiLabel5
             // 
             this.uiLabel5.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel5.ForeColor = System.Drawing.Color.White;
             this.uiLabel5.Location = new System.Drawing.Point(6, 126);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(209, 90);
@@ -172,6 +191,7 @@
             // lbl_Chuyenbay
             // 
             this.lbl_Chuyenbay.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Chuyenbay.ForeColor = System.Drawing.Color.White;
             this.lbl_Chuyenbay.Location = new System.Drawing.Point(6, 60);
             this.lbl_Chuyenbay.Name = "lbl_Chuyenbay";
             this.lbl_Chuyenbay.Size = new System.Drawing.Size(209, 65);
@@ -183,9 +203,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.groupBox3.Controls.Add(this.uiLabel4);
             this.groupBox3.Controls.Add(this.lbl_Doanhthu);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(474, 10);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(221, 257);
@@ -196,6 +218,7 @@
             // uiLabel4
             // 
             this.uiLabel4.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel4.ForeColor = System.Drawing.Color.White;
             this.uiLabel4.Location = new System.Drawing.Point(6, 126);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(209, 90);
@@ -208,6 +231,7 @@
             // lbl_Doanhthu
             // 
             this.lbl_Doanhthu.Font = new System.Drawing.Font("Microsoft YaHei", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Doanhthu.ForeColor = System.Drawing.Color.White;
             this.lbl_Doanhthu.Location = new System.Drawing.Point(6, 60);
             this.lbl_Doanhthu.Name = "lbl_Doanhthu";
             this.lbl_Doanhthu.Size = new System.Drawing.Size(209, 65);
@@ -219,9 +243,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.groupBox2.Controls.Add(this.uiLabel1);
             this.groupBox2.Controls.Add(this.lbl_Khachhang);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(243, 10);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(221, 257);
@@ -232,6 +258,7 @@
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel1.ForeColor = System.Drawing.Color.White;
             this.uiLabel1.Location = new System.Drawing.Point(6, 126);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(209, 90);
@@ -244,6 +271,7 @@
             // lbl_Khachhang
             // 
             this.lbl_Khachhang.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Khachhang.ForeColor = System.Drawing.Color.White;
             this.lbl_Khachhang.Location = new System.Drawing.Point(6, 60);
             this.lbl_Khachhang.Name = "lbl_Khachhang";
             this.lbl_Khachhang.Size = new System.Drawing.Size(209, 65);
@@ -255,10 +283,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.groupBox1.Controls.Add(this.uiLabel3);
             this.groupBox1.Controls.Add(this.lbl_Nhanvien);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(221, 257);
@@ -269,6 +298,7 @@
             // uiLabel3
             // 
             this.uiLabel3.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel3.ForeColor = System.Drawing.Color.White;
             this.uiLabel3.Location = new System.Drawing.Point(6, 125);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(209, 90);
@@ -281,6 +311,7 @@
             // lbl_Nhanvien
             // 
             this.lbl_Nhanvien.Font = new System.Drawing.Font("Microsoft YaHei", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Nhanvien.ForeColor = System.Drawing.Color.White;
             this.lbl_Nhanvien.Location = new System.Drawing.Point(6, 60);
             this.lbl_Nhanvien.Name = "lbl_Nhanvien";
             this.lbl_Nhanvien.Size = new System.Drawing.Size(209, 65);
@@ -328,7 +359,7 @@
             this.cb_Chucnang.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Chucnang.Items.AddRange(new object[] {
             "Thống kê doanh số bán vé",
-            "Thống kê lợi nhuận"});
+            "Thống kê doanh thu"});
             this.cb_Chucnang.Location = new System.Drawing.Point(246, 75);
             this.cb_Chucnang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cb_Chucnang.MinimumSize = new System.Drawing.Size(63, 0);
@@ -339,18 +370,6 @@
             this.cb_Chucnang.Text = "Chọn chức năng thống kê";
             this.cb_Chucnang.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cb_Chucnang.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // uiLabel6
-            // 
-            this.uiLabel6.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel6.Location = new System.Drawing.Point(6, 126);
-            this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(209, 90);
-            this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
-            this.uiLabel6.TabIndex = 5;
-            this.uiLabel6.Text = "Vé";
-            this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // ucStatistical
             // 
