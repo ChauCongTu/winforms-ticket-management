@@ -22,7 +22,7 @@ namespace Sunny.UI.Demo.Views
             nmAside.Nodes.Add("QLKH", "Thông tin Khách hàng");
             nmAside.Nodes[8].Tag = "QLKH";
             mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(new ucStatistical());
+            mainPanel.Controls.Add(new ucBooking());
         }
 
         public MainFrame(User loginUser)
@@ -32,7 +32,7 @@ namespace Sunny.UI.Demo.Views
             nmAside.Nodes.Add("QLKH", "Quản lý khách hàng");
             nmAside.Nodes[8].Tag = "QLKH";
             mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(new ucStatistical());
+            mainPanel.Controls.Add(new ucBooking());
         }
 
         private void nmAside_MenuItemClick(TreeNode node, NavMenuItem item, int pageIndex)
@@ -54,8 +54,15 @@ namespace Sunny.UI.Demo.Views
             }
             else if (node.Tag.ToString() == "BCTK")
             {
-                mainPanel.Controls.Clear();
-                mainPanel.Controls.Add(new ucStatistical());
+                if (myProfile.Role == "Admin")
+                {
+                    mainPanel.Controls.Clear();
+                    mainPanel.Controls.Add(new ucStatistical());
+                }
+                else
+                {
+                    MessageBox.Show("Bạn không đủ thẩm quyền để truy cập vào đây!", "Warning");
+                }
             }
             else if (node.Tag.ToString() == "QLSB")
             {
@@ -79,7 +86,7 @@ namespace Sunny.UI.Demo.Views
             }
             else if (node.Tag.ToString() == "QLNV")
             {
-                if (myProfile.Role == "admin")
+                if (myProfile.Role == "Admin")
                 {
                     mainPanel.Controls.Clear();
                     mainPanel.Controls.Add(new ucEmployee());

@@ -91,7 +91,7 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (cbFromDe.Text.Length <= 0 || cbToDe.Text.Length <= 0 || cbFrom.Text.Length <= 0 || cbTo.Text.Length <= 0 || txtTotalTicket.TextLength <= 0 || cbAirplane.Text.Length <= 0)
+            if (cbFromDe.Text.Length <= 0 || cbToDe.Text.Length <= 0 || cbFrom.Text.Length <= 0 || cbTo.Text.Length <= 0 || cbAirplane.Text.Length <= 0)
             {
                 lbErr.Text = "Vui lòng nhập đầy đủ thông tin.";
             }
