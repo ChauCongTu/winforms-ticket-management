@@ -29,7 +29,7 @@ namespace Sunny.UI.Demo.Views
         {
             InitializeComponent();
             myProfile = loginUser;
-            nmAside.Nodes.Add("QLKH", "Quản lý khách hàng");
+            nmAside.Nodes.Add("QLKH", "Thông tin Khách hàng");
             nmAside.Nodes[8].Tag = "QLKH";
             mainPanel.Controls.Clear();
             mainPanel.Controls.Add(new ucBooking());

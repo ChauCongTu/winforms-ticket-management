@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.uiMarkLabel2 = new Sunny.UI.UIMarkLabel();
             this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.Time_Start = new Sunny.UI.UIDatePicker();
+            this.Time_End = new Sunny.UI.UIDatePicker();
             this.btn_Load = new Sunny.UI.UIButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,13 +50,11 @@
             this.lbl_Economy = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new Sunny.UI.UIButton();
             this.btn_Chon = new Sunny.UI.UIButton();
             this.btn_XuatBC = new Sunny.UI.UIButton();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.cb_Thoigian = new Sunny.UI.UIComboBox();
-            this.btnClose = new Sunny.UI.UIButton();
-            this.Time_End = new Sunny.UI.UIDatePicker();
-            this.Time_Start = new Sunny.UI.UIDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.uiPanel1.SuspendLayout();
@@ -68,33 +68,33 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(9, 5);
-            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(770, 535);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
-            title4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.ForeColor = System.Drawing.Color.Red;
-            title4.Name = "Title1";
-            title4.Text = "BIỂU ĐỒ DOANH THU BÁN VÉ";
-            this.chart1.Titles.Add(title4);
+            title2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.ForeColor = System.Drawing.Color.Red;
+            title2.Name = "Title1";
+            title2.Text = "BIỂU ĐỒ DOANH THU BÁN VÉ";
+            this.chart1.Titles.Add(title2);
             // 
             // pbLogo
             // 
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.Image = global::Sunny.UI.Demo.Properties.Resources.download1;
             this.pbLogo.Location = new System.Drawing.Point(9, 7);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(152, 107);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -134,6 +134,46 @@
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.uiPanel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // Time_Start
+            // 
+            this.Time_Start.DateFormat = "dd/MM/yyyy";
+            this.Time_Start.FillColor = System.Drawing.Color.White;
+            this.Time_Start.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Time_Start.Location = new System.Drawing.Point(13, 55);
+            this.Time_Start.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Time_Start.MaxLength = 10;
+            this.Time_Start.MinimumSize = new System.Drawing.Size(63, 0);
+            this.Time_Start.Name = "Time_Start";
+            this.Time_Start.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.Time_Start.Size = new System.Drawing.Size(200, 35);
+            this.Time_Start.SymbolDropDown = 61555;
+            this.Time_Start.SymbolNormal = 61555;
+            this.Time_Start.TabIndex = 24;
+            this.Time_Start.Text = "05/11/2023";
+            this.Time_Start.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Time_Start.Value = new System.DateTime(2023, 11, 5, 0, 0, 0, 0);
+            this.Time_Start.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // Time_End
+            // 
+            this.Time_End.DateFormat = "dd/MM/yyyy";
+            this.Time_End.FillColor = System.Drawing.Color.White;
+            this.Time_End.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Time_End.Location = new System.Drawing.Point(241, 55);
+            this.Time_End.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Time_End.MaxLength = 10;
+            this.Time_End.MinimumSize = new System.Drawing.Size(63, 0);
+            this.Time_End.Name = "Time_End";
+            this.Time_End.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.Time_End.Size = new System.Drawing.Size(200, 35);
+            this.Time_End.SymbolDropDown = 61555;
+            this.Time_End.SymbolNormal = 61555;
+            this.Time_End.TabIndex = 23;
+            this.Time_End.Text = "05/11/2023";
+            this.Time_End.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Time_End.Value = new System.DateTime(2023, 11, 5, 0, 0, 0, 0);
+            this.Time_End.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
             // btn_Load
             // 
             this.btn_Load.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -150,11 +190,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(8, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 25);
+            this.label3.Size = new System.Drawing.Size(114, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tùy chỉnh:";
             // 
@@ -164,7 +204,7 @@
             this.panel1.Controls.Add(this.uiPanel2);
             this.panel1.Controls.Add(this.chart1);
             this.panel1.Location = new System.Drawing.Point(7, 124);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1167, 545);
             this.panel1.TabIndex = 24;
@@ -189,7 +229,7 @@
             // uiGroupBox3
             // 
             this.uiGroupBox3.Controls.Add(this.lbl_FirstClass);
-            this.uiGroupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiGroupBox3.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiGroupBox3.Location = new System.Drawing.Point(20, 296);
             this.uiGroupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox3.MinimumSize = new System.Drawing.Size(1, 1);
@@ -205,11 +245,9 @@
             // 
             this.lbl_FirstClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
             this.lbl_FirstClass.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_FirstClass.ForeColor = System.Drawing.Color.White;
             this.lbl_FirstClass.Location = new System.Drawing.Point(65, 45);
             this.lbl_FirstClass.Name = "lbl_FirstClass";
             this.lbl_FirstClass.Size = new System.Drawing.Size(200, 35);
-            this.lbl_FirstClass.Style = Sunny.UI.UIStyle.Custom;
             this.lbl_FirstClass.TabIndex = 2;
             this.lbl_FirstClass.Text = "0";
             this.lbl_FirstClass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,7 +256,7 @@
             // uiGroupBox2
             // 
             this.uiGroupBox2.Controls.Add(this.lbl_Business);
-            this.uiGroupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiGroupBox2.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiGroupBox2.Location = new System.Drawing.Point(20, 177);
             this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
@@ -234,11 +272,9 @@
             // 
             this.lbl_Business.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.lbl_Business.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Business.ForeColor = System.Drawing.Color.White;
             this.lbl_Business.Location = new System.Drawing.Point(67, 46);
             this.lbl_Business.Name = "lbl_Business";
             this.lbl_Business.Size = new System.Drawing.Size(200, 35);
-            this.lbl_Business.Style = Sunny.UI.UIStyle.Custom;
             this.lbl_Business.TabIndex = 1;
             this.lbl_Business.Text = "0";
             this.lbl_Business.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -247,7 +283,7 @@
             // uiGroupBox1
             // 
             this.uiGroupBox1.Controls.Add(this.lbl_Economy);
-            this.uiGroupBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.uiGroupBox1.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiGroupBox1.Location = new System.Drawing.Point(20, 58);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -263,11 +299,9 @@
             // 
             this.lbl_Economy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.lbl_Economy.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Economy.ForeColor = System.Drawing.Color.White;
             this.lbl_Economy.Location = new System.Drawing.Point(65, 48);
             this.lbl_Economy.Name = "lbl_Economy";
             this.lbl_Economy.Size = new System.Drawing.Size(202, 35);
-            this.lbl_Economy.Style = Sunny.UI.UIStyle.Custom;
             this.lbl_Economy.TabIndex = 0;
             this.lbl_Economy.Text = "0";
             this.lbl_Economy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,17 +329,31 @@
             this.panel2.Controls.Add(this.uiLabel1);
             this.panel2.Controls.Add(this.cb_Thoigian);
             this.panel2.Location = new System.Drawing.Point(7, 673);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1167, 123);
             this.panel2.TabIndex = 25;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(1055, 38);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(105, 43);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.Text = "Đóng";
+            this.btnClose.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btn_Chon
             // 
             this.btn_Chon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Chon.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Chon.Location = new System.Drawing.Point(578, 38);
-            this.btn_Chon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Chon.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Chon.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_Chon.Name = "btn_Chon";
             this.btn_Chon.Size = new System.Drawing.Size(133, 43);
@@ -317,9 +365,10 @@
             // btn_XuatBC
             // 
             this.btn_XuatBC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_XuatBC.Enabled = false;
             this.btn_XuatBC.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XuatBC.Location = new System.Drawing.Point(890, 38);
-            this.btn_XuatBC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_XuatBC.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XuatBC.MinimumSize = new System.Drawing.Size(1, 1);
             this.btn_XuatBC.Name = "btn_XuatBC";
             this.btn_XuatBC.Size = new System.Drawing.Size(157, 43);
@@ -360,60 +409,6 @@
             this.cb_Thoigian.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cb_Thoigian.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
-            // btnClose
-            // 
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1055, 38);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 43);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "Đóng";
-            this.btnClose.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // Time_End
-            // 
-            this.Time_End.DateFormat = "dd/MM/yyyy";
-            this.Time_End.FillColor = System.Drawing.Color.White;
-            this.Time_End.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Time_End.Location = new System.Drawing.Point(241, 55);
-            this.Time_End.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Time_End.MaxLength = 10;
-            this.Time_End.MinimumSize = new System.Drawing.Size(63, 0);
-            this.Time_End.Name = "Time_End";
-            this.Time_End.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.Time_End.Size = new System.Drawing.Size(200, 35);
-            this.Time_End.SymbolDropDown = 61555;
-            this.Time_End.SymbolNormal = 61555;
-            this.Time_End.TabIndex = 23;
-            this.Time_End.Text = "05/11/2023";
-            this.Time_End.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Time_End.Value = new System.DateTime(2023, 11, 5, 0, 0, 0, 0);
-            this.Time_End.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
-            // Time_Start
-            // 
-            this.Time_Start.DateFormat = "dd/MM/yyyy";
-            this.Time_Start.FillColor = System.Drawing.Color.White;
-            this.Time_Start.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Time_Start.Location = new System.Drawing.Point(13, 55);
-            this.Time_Start.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Time_Start.MaxLength = 10;
-            this.Time_Start.MinimumSize = new System.Drawing.Size(63, 0);
-            this.Time_Start.Name = "Time_Start";
-            this.Time_Start.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.Time_Start.Size = new System.Drawing.Size(200, 35);
-            this.Time_Start.SymbolDropDown = 61555;
-            this.Time_Start.SymbolNormal = 61555;
-            this.Time_Start.TabIndex = 24;
-            this.Time_Start.Text = "05/11/2023";
-            this.Time_Start.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Time_Start.Value = new System.DateTime(2023, 11, 5, 0, 0, 0, 0);
-            this.Time_Start.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
-            // 
             // Statistical_Ticket_Sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -426,7 +421,7 @@
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.uiMarkLabel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Statistical_Ticket_Sales";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

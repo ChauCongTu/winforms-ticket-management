@@ -207,7 +207,7 @@ namespace Sunny.UI.Demo.Views.UserCtrl
             }
             else if (new DAO_Ticket().isSold(Int32.Parse(cbTicket.SelectedValue.ToString())))
             {
-                MessageBox.Show("Vé này đã được đặt bởi một khách hàng khách!", "Có lỗi xảy ra");
+                MessageBox.Show("Vé này đã được đặt bởi một khách hàng khác!", "Có lỗi xảy ra");
             }
             else if (!new DAO_Ticket().checkLower9(txtCCCD.Text, Convert.ToInt32(txtFlightId.Text)))
             {
