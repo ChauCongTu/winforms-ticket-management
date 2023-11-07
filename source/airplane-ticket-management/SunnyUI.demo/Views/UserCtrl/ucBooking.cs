@@ -168,7 +168,7 @@ namespace Sunny.UI.Demo.Views.UserCtrl
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy chuyến bay này! Vui lòng kiểm tra lại.");
+                    MessageBox.Show("Không tìm thấy chuyến bay này! Vui lòng kiểm tra lại.", "Có lỗi xảy ra");
                 }
             }
             else

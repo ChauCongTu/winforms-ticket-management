@@ -69,7 +69,7 @@ namespace Sunny.UI.Demo
             List<string> provinceLists = new List<string>
             {
                 "Ha Noi", "Ha Giang", "Cao Bang", "Lao Cai", "Tuyen Quang", "Lang Son", "Bac Kan",
-                "Thai Nguyen", "Phu Tho", "Vinh Phuc", "Bac Ninh", "Hai Duong", "Hai Phong",
+                "Thai Nguyen", "Phu Tho", "Vinh Phuc", "Bac Ninh", "Hai Duong", "Hai Phong", "Quang Ninh",
                 "Hung Yen", "Thai Binh", "Ha Nam", "Nam Dinh", "Ninh Binh", "Thanh Hoa",
                 "Nghe An", "Ha Tinh", "Quang Binh", "Quang Tri", "Thua Thien Hue", "Da Nang",
                 "Quang Nam", "Quang Ngai", "Binh Dinh", "Phu Yen", "Khanh Hoa", "Ninh Thuan",
@@ -77,7 +77,7 @@ namespace Sunny.UI.Demo
                 "Binh Phuoc", "Tay Ninh", "Binh Duong", "Dong Nai", "Ba Ria - Vung Tau",
                 "Ho Chi Minh City", "Long An", "Tien Giang", "Ben Tre", "Tra Vinh", "Vinh Long",
                 "Dong Thap", "An Giang", "Kien Giang", "Can Tho", "Hau Giang", "Soc Trang",
-                "Bac Lieu", "Ca Mau", "Dong Thap", "Ba Ria - Vung Tau", "Phu Yen",
+                "Bac Lieu", "Ca Mau", "Ba Ria - Vung Tau", "Phu Yen",
                 "Khanh Hoa", "Binh Thuan", "Lam Dong", "Ninh Thuan"
             };
 
