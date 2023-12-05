@@ -310,6 +310,39 @@ namespace Sunny.UI.Demo.DAO
             _conn.Close();
             return hasRow;
         }
+        public int getPriceByPlane(int plane_id)
+        {
+            int hasRow = 0;
+            _conn.Open();
+            try
+            {
+                command = new SqlCommand($"SELECT MIN(t.price_vnd) FROM airplanes a JOIN flights f ON a.airplane_id = f.aircraft_id JOIN tickets t ON f.flight_id = t.flight_id WHERE a.airplane_id = {plane_id}", _conn);
+                reader = command.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                new Helper().dbError();
+                return 0;
+            }
+
+            while (reader.Read())
+            {
+                // Kiểm tra xem giá trị có phải là null hay không
+                if (!reader.IsDBNull(0))
+                {
+                    hasRow = reader.GetInt32(0);
+                }
+                // Nếu giá trị là null, đặt hasRow thành 0
+                else
+                {
+                    hasRow = 0;
+                }
+            }
+
+            _conn.Close();
+            return hasRow;
+        }
+
 
         public int getRemainTicket(int flightid)
         {

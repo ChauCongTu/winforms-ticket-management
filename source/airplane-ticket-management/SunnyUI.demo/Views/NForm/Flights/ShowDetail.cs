@@ -101,19 +101,14 @@ namespace Sunny.UI.Demo.Views.NForm.Flights
                 int totalTicket = 0;
                 try
                 {
-                    totalTicket = Int32.Parse(txtTotalTicket.Text);
+                    totalTicket = 100;
                 }
                 catch (Exception ex)
                 {
                     lbErr.Text = "Tổng số vé của chuyến bay phải là số nguyên không âm.";
                     lbErr.ForeColor = Color.Red;
                 }
-                if (!ValidationHelper.IsNonNegativeInteger(txtTotalTicket.Text))
-                {
-                    lbErr.Text = "Tổng số vé của chuyến bay phải là số nguyên không âm.";
-                    lbErr.ForeColor = Color.Red;
-                }
-                else if (cbFromDe.Text == cbToDe.Text || cbFrom.Text == cbTo.Text)
+                if (cbFromDe.Text == cbToDe.Text || cbFrom.Text == cbTo.Text)
                 {
                     lbErr.Text = "Điểm đi và điểm đến không được trùng nhau.";
                     lbErr.ForeColor = Color.Red;

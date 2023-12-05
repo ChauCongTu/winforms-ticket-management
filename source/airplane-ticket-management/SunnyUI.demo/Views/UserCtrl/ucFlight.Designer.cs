@@ -36,15 +36,6 @@
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiMarkLabel1 = new Sunny.UI.UIMarkLabel();
             this.dgvFlight = new Sunny.UI.UIDataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgviName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgviEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgviDOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this._quacanh = new System.Windows.Forms.DataGridViewImageColumn();
-            this._detail = new System.Windows.Forms.DataGridViewImageColumn();
-            this._xoa = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -56,6 +47,15 @@
             this.uiLine2 = new Sunny.UI.UILine();
             this.cbFrom = new Sunny.UI.UIComboBox();
             this.cbTo = new Sunny.UI.UIComboBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgviName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgviEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._quacanh = new System.Windows.Forms.DataGridViewImageColumn();
+            this._detail = new System.Windows.Forms.DataGridViewImageColumn();
+            this._xoa = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
@@ -110,9 +110,9 @@
             this.dataGridViewTextBoxColumn1,
             this.dgviName,
             this.dgviEmail,
-            this.dgviDOB,
             this._date,
             this._time,
+            this.Column1,
             this._quacanh,
             this._detail,
             this._xoa});
@@ -155,87 +155,6 @@
             this.dgvFlight.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.dgvFlight.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFlight_CellContentClick);
             this.dgvFlight.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFlight_CellContentDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 48.12834F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dgviName
-            // 
-            this.dgviName.FillWeight = 175.1621F;
-            this.dgviName.HeaderText = "Điểm khởi hành";
-            this.dgviName.MinimumWidth = 6;
-            this.dgviName.Name = "dgviName";
-            this.dgviName.ReadOnly = true;
-            // 
-            // dgviEmail
-            // 
-            this.dgviEmail.FillWeight = 96.67277F;
-            this.dgviEmail.HeaderText = "Điểm đến";
-            this.dgviEmail.MinimumWidth = 6;
-            this.dgviEmail.Name = "dgviEmail";
-            this.dgviEmail.ReadOnly = true;
-            // 
-            // dgviDOB
-            // 
-            this.dgviDOB.FillWeight = 96.67277F;
-            this.dgviDOB.HeaderText = "Số vé còn";
-            this.dgviDOB.MinimumWidth = 6;
-            this.dgviDOB.Name = "dgviDOB";
-            this.dgviDOB.ReadOnly = true;
-            // 
-            // _date
-            // 
-            this._date.FillWeight = 96.67277F;
-            this._date.HeaderText = "Ngày bay";
-            this._date.MinimumWidth = 6;
-            this._date.Name = "_date";
-            this._date.ReadOnly = true;
-            // 
-            // _time
-            // 
-            this._time.FillWeight = 96.67277F;
-            this._time.HeaderText = "Giờ bay";
-            this._time.MinimumWidth = 6;
-            this._time.Name = "_time";
-            this._time.ReadOnly = true;
-            // 
-            // _quacanh
-            // 
-            this._quacanh.FillWeight = 96.67277F;
-            this._quacanh.HeaderText = "";
-            this._quacanh.Image = global::Sunny.UI.Demo.Properties.Resources.transit;
-            this._quacanh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this._quacanh.MinimumWidth = 6;
-            this._quacanh.Name = "_quacanh";
-            this._quacanh.ReadOnly = true;
-            // 
-            // _detail
-            // 
-            this._detail.FillWeight = 96.67277F;
-            this._detail.HeaderText = "";
-            this._detail.Image = global::Sunny.UI.Demo.Properties.Resources.view_details_4__1_;
-            this._detail.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this._detail.MinimumWidth = 6;
-            this._detail.Name = "_detail";
-            this._detail.ReadOnly = true;
-            // 
-            // _xoa
-            // 
-            this._xoa.FillWeight = 96.67277F;
-            this._xoa.HeaderText = "";
-            this._xoa.Image = global::Sunny.UI.Demo.Properties.Resources._6048190__1_;
-            this._xoa.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this._xoa.MinimumWidth = 6;
-            this._xoa.Name = "_xoa";
-            this._xoa.ReadOnly = true;
-            this._xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this._xoa.ToolTipText = "Xóa";
             // 
             // dataGridViewImageColumn1
             // 
@@ -387,6 +306,86 @@
             this.cbTo.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.cbTo.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 48.12834F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dgviName
+            // 
+            this.dgviName.FillWeight = 175.1621F;
+            this.dgviName.HeaderText = "Điểm khởi hành";
+            this.dgviName.MinimumWidth = 6;
+            this.dgviName.Name = "dgviName";
+            this.dgviName.ReadOnly = true;
+            // 
+            // dgviEmail
+            // 
+            this.dgviEmail.FillWeight = 96.67277F;
+            this.dgviEmail.HeaderText = "Điểm đến";
+            this.dgviEmail.MinimumWidth = 6;
+            this.dgviEmail.Name = "dgviEmail";
+            this.dgviEmail.ReadOnly = true;
+            // 
+            // _date
+            // 
+            this._date.FillWeight = 96.67277F;
+            this._date.HeaderText = "Ngày bay";
+            this._date.MinimumWidth = 6;
+            this._date.Name = "_date";
+            this._date.ReadOnly = true;
+            // 
+            // _time
+            // 
+            this._time.FillWeight = 96.67277F;
+            this._time.HeaderText = "Giờ bay";
+            this._time.MinimumWidth = 6;
+            this._time.Name = "_time";
+            this._time.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Giá vé";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // _quacanh
+            // 
+            this._quacanh.FillWeight = 96.67277F;
+            this._quacanh.HeaderText = "";
+            this._quacanh.Image = global::Sunny.UI.Demo.Properties.Resources.transit;
+            this._quacanh.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this._quacanh.MinimumWidth = 6;
+            this._quacanh.Name = "_quacanh";
+            this._quacanh.ReadOnly = true;
+            // 
+            // _detail
+            // 
+            this._detail.FillWeight = 96.67277F;
+            this._detail.HeaderText = "";
+            this._detail.Image = global::Sunny.UI.Demo.Properties.Resources.view_details_4__1_;
+            this._detail.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this._detail.MinimumWidth = 6;
+            this._detail.Name = "_detail";
+            this._detail.ReadOnly = true;
+            // 
+            // _xoa
+            // 
+            this._xoa.FillWeight = 96.67277F;
+            this._xoa.HeaderText = "";
+            this._xoa.Image = global::Sunny.UI.Demo.Properties.Resources._6048190__1_;
+            this._xoa.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this._xoa.MinimumWidth = 6;
+            this._xoa.Name = "_xoa";
+            this._xoa.ReadOnly = true;
+            this._xoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this._xoa.ToolTipText = "Xóa";
+            // 
             // ucFlight
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -432,9 +431,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgviName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgviEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgviDOB;
         private System.Windows.Forms.DataGridViewTextBoxColumn _date;
         private System.Windows.Forms.DataGridViewTextBoxColumn _time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn _quacanh;
         private System.Windows.Forms.DataGridViewImageColumn _detail;
         private System.Windows.Forms.DataGridViewImageColumn _xoa;

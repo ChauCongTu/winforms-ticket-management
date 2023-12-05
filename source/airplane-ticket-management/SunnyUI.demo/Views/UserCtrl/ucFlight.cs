@@ -27,7 +27,7 @@ namespace Sunny.UI.Demo.Views.UserCtrl
             List<Flight> flights = daoFlight.getAll();
             foreach (Flight flight in flights)
             {
-                dgvFlight.Rows.Add(flight.FlightId, flight.DeparturePoint, flight.Destination, flight.RemainingTickets, flight.DepartureTime.Value.ToString("dd/MM/yyyy"), flight.DepartureTime.Value.ToString("hh:mm"));
+                dgvFlight.Rows.Add(flight.FlightId, flight.DeparturePoint, flight.Destination, flight.DepartureTime.Value.ToString("dd/MM/yyyy"), flight.DepartureTime.Value.ToString("HH:mm"), Helper.FormatVND(new DAO_Ticket().getPriceByPlane(flight.Airplane.AirplaneId).ToString()) +"đ");
             }
         }
 
@@ -129,7 +129,7 @@ namespace Sunny.UI.Demo.Views.UserCtrl
             }
             foreach (Flight flight in flights)
             {
-                dgvFlight.Rows.Add(flight.FlightId, flight.DeparturePoint, flight.Destination, flight.RemainingTickets, flight.DepartureTime.Value.ToString("dd/MM/yyyy"), flight.DepartureTime.Value.ToString("hh:mm"));
+                dgvFlight.Rows.Add(flight.FlightId, flight.DeparturePoint, flight.Destination, flight.DepartureTime.Value.ToString("dd/MM/yyyy"), flight.DepartureTime.Value.ToString("HH:mm"), Helper.FormatVND(new DAO_Ticket().getPriceByPlane(flight.Airplane.AirplaneId).ToString()) + "đ");
             }
         }
     }

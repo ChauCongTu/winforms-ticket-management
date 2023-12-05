@@ -477,8 +477,10 @@
             // txtTotalTicket
             // 
             this.txtTotalTicket.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalTicket.DoubleValue = 100D;
             this.txtTotalTicket.Enabled = false;
             this.txtTotalTicket.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.txtTotalTicket.IntValue = 100;
             this.txtTotalTicket.Location = new System.Drawing.Point(246, 255);
             this.txtTotalTicket.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTotalTicket.MinimumSize = new System.Drawing.Size(1, 16);
@@ -486,6 +488,7 @@
             this.txtTotalTicket.ShowText = false;
             this.txtTotalTicket.Size = new System.Drawing.Size(252, 29);
             this.txtTotalTicket.TabIndex = 6;
+            this.txtTotalTicket.Text = "100";
             this.txtTotalTicket.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtTotalTicket.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 

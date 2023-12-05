@@ -64,6 +64,10 @@ namespace Sunny.UI.Demo.Views.NForm.Customers
             {
                 lbErr.Text = "Ngày sinh không hợp lệ!";
             }
+            else if (DateTime.Now.Year - dpDob.Value.Year < 18)
+            {
+                lbErr.Text = "Bạn phải trên 18 tuổi!";
+            }
             else if (!ValidationHelper.IsNonNegativeInteger(txtPhone.Text))
             {
                 lbErr.Text = "Số điện thoại phải là số!";
